@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References &middot; Production Engineering for AI Systems (HIT)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="topnav"><div class="inner">
+  <a class="brand" href="../index.html">Production Engineering for AI Systems <span>&middot; HIT</span></a>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../index.html#weekly">Weekly materials</a>
+    <a href="../index.html#project">Project</a>
+    <a href="index.html">References</a>
+  </nav>
+</div></div>
+
+<div class="wrap">
+
+  <div class="whead">
+    <p class="eyebrow"><span class="wbadge">References</span> &nbsp; Curated reading across the six layers</p>
+    <h1>References &amp; Reading List</h1>
+    <p class="sub">Books, canonical papers, and authoritative docs for DevOps, DataOps, MLOps, LLMOps, AgentOps, and AIOps.</p>
+  </div>
+
+  <p>The list below groups recommendations by layer. The <a href="#byweek">reading-by-week</a> table at the foot maps each lecture to its primary sources; the per-week links on the lesson plans point there. Free online resources are linked directly; books are listed with ISBN.</p>
+
+  <h2 id="foundations">Foundations &amp; General</h2>
+  <div class="refgrid">
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Designing Data-Intensive Applications</b> <span class="by">&middot; Martin Kleppmann &middot; O'Reilly, 2017 &middot; ISBN 9781449373320</span><p class="note">The backbone systems text: storage, replication, partitioning, consistency, and batch/stream processing. Assign the 1st edition; the 2nd is forthcoming (2026).</p></div></div>
+    <div class="refcard"><div class="kind">Free</div><div class="body"><a href="https://sre.google/sre-book/table-of-contents/" target="_blank" rel="noopener">Site Reliability Engineering</a> <span class="by">&middot; Beyer, Jones, Petoff &amp; Murphy (eds.) &middot; Google / O'Reilly, 2016</span><p class="note">The canonical SRE text: SLOs, error budgets, toil, on-call. Read free online.</p></div></div>
+    <div class="refcard"><div class="kind">Free</div><div class="body"><a href="https://sre.google/workbook/table-of-contents/" target="_blank" rel="noopener">The Site Reliability Workbook</a> <span class="by">&middot; Beyer, Murphy, Rensin, Kawahara &amp; Thorne (eds.) &middot; Google / O'Reilly, 2018</span><p class="note">Hands-on companion with worked SLO and error-budget examples. Read free online.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Accelerate: The Science of Lean Software and DevOps</b> <span class="by">&middot; Forsgren, Humble &amp; Kim &middot; IT Revolution, 2018 &middot; ISBN 9781942788331</span><p class="note">The evidence base for the four DORA delivery metrics.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Fundamentals of Software Architecture</b> <span class="by">&middot; Mark Richards &amp; Neal Ford &middot; O'Reilly, 2020 &middot; ISBN 9781492043454</span><p class="note">Architecture characteristics and trade-off analysis for production systems.</p></div></div>
+  </div>
+
+  <h2 id="devops">DevOps</h2>
+  <div class="refgrid">
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>The DevOps Handbook</b> (2nd ed.) <span class="by">&middot; Kim, Humble, Debois, Willis &amp; Forsgren &middot; IT Revolution, 2021 &middot; ISBN 9781950508402</span><p class="note">The practitioner reference for flow, feedback, and continual learning.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>The Phoenix Project</b> <span class="by">&middot; Kim, Behr &amp; Spafford &middot; IT Revolution, 2013 (rev. 2018) &middot; ISBN 9781942788294</span><p class="note">A narrative on-ramp to DevOps thinking; good week-1 motivation.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Kubernetes: Up &amp; Running</b> (3rd ed.) <span class="by">&middot; Burns, Beda, Hightower &amp; Evenson &middot; O'Reilly, 2022 &middot; ISBN 9781098110208</span><p class="note">The standard hands-on Kubernetes primer from its creators.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Cloud Native DevOps with Kubernetes</b> (2nd ed.) <span class="by">&middot; Arundel &amp; Domingus &middot; O'Reilly, 2022 &middot; ISBN 9781098116828</span><p class="note">Bridges Kubernetes to CI/CD, GitOps, and operations.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Terraform: Up &amp; Running</b> (3rd ed.) <span class="by">&middot; Yevgeniy Brikman &middot; O'Reilly, 2022 &middot; ISBN 9781098116743</span><p class="note">The go-to practical infrastructure-as-code text.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Infrastructure as Code</b> (2nd ed.) <span class="by">&middot; Kief Morris &middot; O'Reilly, 2020 &middot; ISBN 9781098114671</span><p class="note">Tool-agnostic IaC principles and patterns.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Observability Engineering</b> <span class="by">&middot; Majors, Fong-Jones &amp; Miranda &middot; O'Reilly, 2022 &middot; ISBN 9781492076445</span><p class="note">Modern logs, metrics, traces, and the structured-events view of observability.</p></div></div>
+    <div class="refcard"><div class="kind">Docs</div><div class="body"><a href="https://opentelemetry.io/docs/" target="_blank" rel="noopener">OpenTelemetry documentation</a> <span class="by">&middot; CNCF</span><p class="note">The vendor-neutral standard for traces, metrics, and logs.</p></div></div>
+  </div>
+
+  <h2 id="dataops">DataOps</h2>
+  <div class="refgrid">
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Fundamentals of Data Engineering</b> <span class="by">&middot; Joe Reis &amp; Matt Housley &middot; O'Reilly, 2022 &middot; ISBN 9781098108304</span><p class="note">The best survey of the data lifecycle (ingest, store, transform, serve) with a DataOps chapter.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Data Pipelines with Apache Airflow</b> <span class="by">&middot; Harenslak &amp; de Ruiter &middot; Manning, 2021 &middot; ISBN 9781617296901</span><p class="note">The definitive hands-on orchestration book; maps to the pipeline weeks.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Data Pipelines Pocket Reference</b> <span class="by">&middot; James Densmore &middot; O'Reilly, 2021 &middot; ISBN 9781492087830</span><p class="note">Compact, practical ELT/ETL patterns in Python and SQL.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Analytics Engineering with SQL and dbt</b> <span class="by">&middot; Machado &amp; Russa &middot; O'Reilly, 2024 &middot; ISBN 9781098142384</span><p class="note">Transformation, testing, and versioned models: the modern data-quality workflow.</p></div></div>
+    <div class="refcard"><div class="kind">Docs</div><div class="body"><a href="https://airflow.apache.org/docs/" target="_blank" rel="noopener">Apache Airflow</a> &middot; <a href="https://docs.getdbt.com/" target="_blank" rel="noopener">dbt</a> &middot; <a href="https://docs.greatexpectations.io/" target="_blank" rel="noopener">Great Expectations</a><p class="note">Orchestration, transformation/testing, and data validation, respectively.</p></div></div>
+  </div>
+
+  <h2 id="mlops">MLOps</h2>
+  <div class="refgrid">
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Designing Machine Learning Systems</b> <span class="by">&middot; Chip Huyen &middot; O'Reilly, 2022 &middot; ISBN 9781098107963</span><p class="note">The leading end-to-end ML system-design text: data, features, deployment, monitoring, drift.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Machine Learning Engineering</b> <span class="by">&middot; Andriy Burkov &middot; True Positive Inc., 2020 &middot; ISBN 9781999579579</span><p class="note">Compact, opinionated coverage of the full ML project lifecycle.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Introducing MLOps</b> <span class="by">&middot; Mark Treveil &amp; the Dataiku team &middot; O'Reilly, 2020 &middot; ISBN 9781492083290</span><p class="note">Accessible framing of model lifecycle, governance, and monitoring.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Machine Learning Design Patterns</b> <span class="by">&middot; Lakshmanan, Robinson &amp; Munn &middot; O'Reilly, 2020 &middot; ISBN 9781098115784</span><p class="note">A pattern catalog for data prep, model building, and MLOps; a useful lookup.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Reliable Machine Learning</b> <span class="by">&middot; Chen, Murphy, Parisa, Sculley &amp; Underwood &middot; O'Reilly, 2022 &middot; ISBN 9781098106225</span><p class="note">Applies SRE principles to ML in production: the bridge between DevOps and MLOps.</p></div></div>
+    <div class="refcard"><div class="kind">Paper</div><div class="body"><a href="https://papers.nips.cc/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html" target="_blank" rel="noopener">Hidden Technical Debt in Machine Learning Systems</a> <span class="by">&middot; Sculley et al. &middot; NeurIPS 2015</span><p class="note">Why ML systems accrue operational debt; the founding MLOps motivation.</p></div></div>
+    <div class="refcard"><div class="kind">Docs</div><div class="body"><a href="https://mlflow.org/docs/latest/index.html" target="_blank" rel="noopener">MLflow</a> &middot; <a href="https://huyenchip.com/mlops/" target="_blank" rel="noopener">Huyen's MLOps guide</a><p class="note">Experiment tracking and registry; a free curated MLOps overview.</p></div></div>
+  </div>
+
+  <h2 id="llmops">LLMOps</h2>
+  <div class="refgrid">
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>AI Engineering: Building Applications with Foundation Models</b> <span class="by">&middot; Chip Huyen &middot; O'Reilly, 2025 &middot; ISBN 9781098166304</span><p class="note">The anchor text for building production LLM apps: evaluation, prompting, RAG, fine-tuning, agents, deployment.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>LLM Engineer's Handbook</b> <span class="by">&middot; Iusztin &amp; Labonne &middot; Packt, 2024 &middot; ISBN 9781836200079</span><p class="note">End-to-end LLMOps pipeline: data, fine-tuning, RAG, deployment, monitoring.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>LLMs in Production</b> <span class="by">&middot; Brousseau &amp; Sharp &middot; Manning, 2024 &middot; ISBN 9781633437203</span><p class="note">Shipping LLMs: serving, cost, LoRA/RLHF, benchmarking.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><a href="https://www.oreilly.com/library/view/llmops/9781098154196/" target="_blank" rel="noopener">LLMOps: Managing Large Language Models in Production</a> <span class="by">&middot; Abi Aryan &middot; O'Reilly, 2025</span><p class="note">Operational LLM concerns: evaluation, governance, GenAI security, cost.</p></div></div>
+    <div class="refcard"><div class="kind">Paper</div><div class="body"><a href="https://arxiv.org/abs/2005.11401" target="_blank" rel="noopener">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a> <span class="by">&middot; Lewis et al. &middot; 2020</span><p class="note">The original RAG paper.</p></div></div>
+    <div class="refcard"><div class="kind">Docs</div><div class="body"><a href="https://platform.openai.com/docs/guides/prompt-engineering" target="_blank" rel="noopener">OpenAI Prompt Engineering</a> &middot; <a href="https://github.com/NVIDIA/NeMo-Guardrails" target="_blank" rel="noopener">NeMo Guardrails</a><p class="note">Prompting guidance; programmable guardrails for LLM apps.</p></div></div>
+  </div>
+
+  <h2 id="agentops">AgentOps</h2>
+  <div class="refgrid">
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>AI Agents in Action</b> <span class="by">&middot; Micheal Lanham &middot; Manning, 2025 &middot; ISBN 9781633436343</span><p class="note">Hands-on multi-agent systems: personas, tool use, memory, collaboration.</p></div></div>
+    <div class="refcard"><div class="kind">Book</div><div class="body"><a href="https://www.oreilly.com/library/view/building-applications-with/9781098176495/" target="_blank" rel="noopener">Building Applications with AI Agents</a> <span class="by">&middot; Michael Albada &middot; O'Reilly, 2025</span><p class="note">Production agent design: orchestration, evaluation, monitoring, human-in-the-loop.</p></div></div>
+    <div class="refcard"><div class="kind">Paper</div><div class="body"><a href="https://arxiv.org/abs/2210.03629" target="_blank" rel="noopener">ReAct: Synergizing Reasoning and Acting in Language Models</a> <span class="by">&middot; Yao et al. &middot; ICLR 2023</span><p class="note">The reason-act-observe loop most agents are built on.</p></div></div>
+    <div class="refcard"><div class="kind">Paper</div><div class="body"><a href="https://arxiv.org/abs/2302.04761" target="_blank" rel="noopener">Toolformer: Language Models Can Teach Themselves to Use Tools</a> <span class="by">&middot; Schick et al. &middot; 2023</span><p class="note">Foundational treatment of tool use / function calling.</p></div></div>
+    <div class="refcard"><div class="kind">Article</div><div class="body"><a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener">Building Effective Agents</a> <span class="by">&middot; Anthropic, 2024</span><p class="note">When to use workflows versus agents; practical patterns and their failure modes.</p></div></div>
+    <div class="refcard"><div class="kind">Docs</div><div class="body"><a href="https://langchain-ai.github.io/langgraph/" target="_blank" rel="noopener">LangGraph</a> &middot; <a href="https://modelcontextprotocol.io/" target="_blank" rel="noopener">Model Context Protocol</a><p class="note">Graph-based agent orchestration; a standard tool/context interface.</p></div></div>
+  </div>
+
+  <h2 id="aiops">AIOps</h2>
+  <p style="color:var(--muted);font-size:.92rem">AIOps has the thinnest book coverage of the six layers; the freshest material lives in surveys, research, and vendor docs. Weight the papers and docs here.</p>
+  <div class="refgrid">
+    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Hands-on AIOps</b> <span class="by">&middot; Navin Sabharwal &amp; Gaurav Bhardwaj &middot; Apress, 2022 &middot; ISBN 9781484282663</span><p class="note">The most complete practitioner book: event dedup, baselining, time-series anomaly detection, log NLP.</p></div></div>
+    <div class="refcard"><div class="kind">Paper</div><div class="body"><a href="https://arxiv.org/abs/2304.04661" target="_blank" rel="noopener">AIOps on Cloud Platforms: Reviews, Opportunities and Challenges</a> <span class="by">&middot; survey &middot; 2023</span><p class="note">A current survey of the AIOps landscape and open problems.</p></div></div>
+    <div class="refcard"><div class="kind">Paper</div><div class="body"><a href="https://www.microsoft.com/en-us/research/publication/aiopslab/" target="_blank" rel="noopener">AIOpsLab: Evaluating AI Agents for Autonomous Clouds</a> <span class="by">&middot; Microsoft Research, 2024</span><p class="note">A framework for evaluating autonomous operations agents.</p></div></div>
+    <div class="refcard"><div class="kind">Free</div><div class="body"><a href="https://sre.google/sre-book/effective-troubleshooting/" target="_blank" rel="noopener">SRE: Effective Troubleshooting</a> &middot; <a href="https://response.pagerduty.com/" target="_blank" rel="noopener">PagerDuty Incident Response</a><p class="note">Troubleshooting and incident-management practice that AIOps automates on top of.</p></div></div>
+  </div>
+
+  <h2 id="byweek">Reading by week</h2>
+  <table class="weeks">
+    <thead><tr><th>Wk</th><th>Topic</th><th>Primary sources</th></tr></thead>
+    <tbody>
+      <tr id="w01"><td class="wk">1</td><td class="t">Ops landscape &amp; SRE</td><td><a href="#foundations">SRE book</a> (SLOs, error budgets), The Phoenix Project, Accelerate.</td></tr>
+      <tr id="w02"><td class="wk">2</td><td class="t">CI/CD &amp; IaC</td><td><a href="#devops">DevOps Handbook</a>, Terraform Up &amp; Running, Infrastructure as Code, Accelerate (DORA).</td></tr>
+      <tr id="w03"><td class="wk">3</td><td class="t">Containers, K8s &amp; observability</td><td><a href="#devops">Kubernetes Up &amp; Running</a>, Cloud Native DevOps, Observability Engineering, OpenTelemetry.</td></tr>
+      <tr id="w04"><td class="wk">4</td><td class="t">Data pipelines &amp; versioning</td><td><a href="#dataops">Fundamentals of Data Engineering</a>, Data Pipelines with Airflow, DDIA (batch/stream).</td></tr>
+      <tr id="w05"><td class="wk">5</td><td class="t">Data quality, contracts &amp; feature stores</td><td><a href="#dataops">Analytics Engineering with dbt</a>, Great Expectations, Fundamentals of Data Engineering (quality).</td></tr>
+      <tr id="w06"><td class="wk">6</td><td class="t">Experiment tracking &amp; registry</td><td><a href="#mlops">Designing ML Systems</a>, Introducing MLOps, MLflow docs, Hidden Technical Debt.</td></tr>
+      <tr id="w07"><td class="wk">7</td><td class="t">CI/CD for ML &amp; serving</td><td><a href="#mlops">Designing ML Systems</a> (deployment), ML Engineering (Burkov), ML Design Patterns, Reliable ML.</td></tr>
+      <tr id="w08"><td class="wk">8</td><td class="t">Monitoring, drift &amp; governance</td><td><a href="#mlops">Designing ML Systems</a> (monitoring), Reliable ML, Introducing MLOps (governance).</td></tr>
+      <tr id="w09"><td class="wk">9</td><td class="t">Serving LLMs, prompts &amp; RAG</td><td><a href="#llmops">AI Engineering</a>, RAG paper (Lewis), LLM Engineer's Handbook, LLMs in Production.</td></tr>
+      <tr id="w10"><td class="wk">10</td><td class="t">LLM eval, guardrails &amp; cost</td><td><a href="#llmops">AI Engineering</a> (eval), LLMOps (Aryan), NeMo Guardrails, OpenAI prompt guide.</td></tr>
+      <tr id="w11"><td class="wk">11</td><td class="t">AgentOps</td><td><a href="#agentops">AI Engineering</a> (agents), AI Agents in Action, ReAct, Toolformer, Building Effective Agents, LangGraph, MCP.</td></tr>
+      <tr id="w12"><td class="wk">12</td><td class="t">AIOps</td><td><a href="#aiops">Hands-on AIOps</a>, AIOps survey, AIOpsLab, Observability Engineering, SRE troubleshooting.</td></tr>
+      <tr id="w13"><td class="wk">13</td><td class="t">Security, governance &amp; synthesis</td><td><a href="#llmops">OWASP Top 10 for LLM Apps</a>, Reliable ML, SRE Workbook, DDIA (synthesis).</td></tr>
+    </tbody>
+  </table>
+
+  <div class="pager"><a href="../index.html"><span class="lbl">Back</span>Course home</a></div>
+
+</div>
+
+<footer>Production Engineering for AI Systems &middot; HIT &middot; Advanced Course &middot; course materials</footer>
+
+</body>
+</html>

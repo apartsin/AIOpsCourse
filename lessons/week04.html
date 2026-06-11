@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 4 Lesson Plan: Data Pipelines &amp; Versioning</title>
+<link rel="stylesheet" href="../assets/style.css"></head><body>
+<div class="topnav"><div class="inner">
+<a class="brand" href="../index.html">Production Engineering for AI Systems <span>&middot; HIT</span></a>
+<nav><a href="../index.html">Home</a><a href="../index.html#weekly">Weekly materials</a><a href="../index.html#project">Project</a><a href="../references/index.html">References</a></nav>
+</div></div>
+<div class="wrap">
+<div class="whead">
+<p class="eyebrow"><span class="wbadge">Week 4</span> &nbsp; Part II &middot; DataOps</p>
+<h1>Data Pipelines &amp; Versioning</h1>
+<p class="sub">Instructor lesson plan: lecture (2 h) and practice (2 h).</p>
+</div>
+
+<div class="goals"><h2>Learning objectives</h2><ul class="clean"><li>Build an orchestrated data pipeline with retries and backfills.</li><li>Reason about batch versus streaming and idempotency.</li><li>Version a dataset and reproduce a result from a pinned snapshot.</li></ul></div>
+
+<h2><span class="ic">&#127891;</span><span class="secttag">Lecture &middot; 2 hours</span></h2>
+<table class="timeline"><tr><td class="tm">0:00-0:10</td><td class="mn">10 min</td><td><b>Recap &amp; objectives</b><span class="dt">Data as the largest source of production ML bugs; objectives.</span></td></tr><tr><td class="tm">0:10-0:30</td><td class="mn">20 min</td><td><b>Motivation</b><span class="dt">Garbage in, garbage out: most ML incidents trace to data, not the model. Pipelines must be reproducible and observable like any other service.</span></td></tr><tr><td class="tm">0:30-1:10</td><td class="mn">40 min</td><td><b>Pipeline orchestration</b><ul class="dt-list"><li>DAGs, scheduling, and dependencies in Airflow or Dagster.</li><li>Idempotency, retries, and backfills; why re-execution must be safe.</li><li>Batch versus streaming, and where each belongs.</li><li>Parameterising the run date instead of hardcoding 'today'.</li></ul></td></tr><tr><td class="tm">1:10-1:20</td><td class="mn">10 min</td><td><b>Break</b></td></tr><tr><td class="tm">1:20-1:50</td><td class="mn">30 min</td><td><b>Data versioning &amp; lineage</b><ul class="dt-list"><li>Immutable snapshots with DVC or lakeFS; pointers instead of blobs in Git.</li><li>Reproducing a result by pinning the exact dataset version.</li><li>Lineage graphs: tracing a number back to the data that produced it.</li></ul></td></tr><tr><td class="tm">1:50-2:00</td><td class="mn">10 min</td><td><b>Wrap-up &amp; practice preview</b><span class="dt">Preview building a DAG and versioning a dataset.</span></td></tr></table>
+
+<div class="callout miss"><b>Common misconception to confront.</b>
+<p style="margin:6px 0 0"><i>Students often think:</i> Re-running a pipeline always gives the same result.<br>
+<i>Set it straight:</i> Only if every stage is idempotent and inputs are versioned. Late-arriving data, mutable sources, and non-deterministic steps make repeated runs diverge.</p></div>
+
+<div class="callout check"><b>Check for understanding</b> (pose during the concept blocks; let students answer before revealing).
+<div class="selfcheck" style="margin-top:8px"><details><summary>Why must an orchestrated task be idempotent?</summary><div class="ans">Retries and backfills re-execute tasks. A non-idempotent task double-writes or corrupts state when it runs twice.</div></details><details><summary>What does data versioning buy you that code versioning does not?</summary><div class="ans">The ability to reproduce a model or result exactly by pinning the dataset snapshot, not just the code that processed it.</div></details></div></div>
+
+<div class="callout"><b>Key takeaways.</b><ul class="clean" style="margin-bottom:0"><li>Most ML production bugs are data bugs.</li><li>Idempotency makes retries and backfills safe.</li><li>Pinning a data version is what makes a result reproducible.</li></ul></div>
+
+<h2 id="practice"><span class="ic">&#128187;</span><span class="secttag prac">Practice &middot; 2 hours</span></h2><p>In the practice session the instructor demonstrates the tooling, runs the code live, and works through examples. The weekly lab is then set as homework, where students apply this themselves.</p><table class="timeline"><tr><td class="tm">0:00-0:10</td><td class="mn">10 min</td><td><b>Setup &amp; recap</b><span class="dt">Open the orchestrator and a small sample dataset.</span></td></tr><tr><td class="tm">0:10-1:00</td><td class="mn">50 min</td><td><b>Instructor demonstrations</b><ul class="dt-list"><li>Author an extract-transform-load DAG with explicit dependencies.</li><li>Trigger a retry and a backfill; show idempotent re-execution.</li><li>Add a data-freshness check to the pipeline.</li></ul></td></tr><tr><td class="tm">1:00-1:10</td><td class="mn">10 min</td><td><b>Break</b></td></tr><tr><td class="tm">1:10-1:50</td><td class="mn">40 min</td><td><b>Instructor demonstrations (continued)</b><ul class="dt-list"><li>Version a dataset with DVC and commit the pointer, not the data.</li><li>Roll back to an earlier snapshot and reproduce a prior output.</li></ul></td></tr><tr><td class="tm">1:50-2:00</td><td class="mn">10 min</td><td><b>Wrap-up &amp; lab brief</b><span class="dt">Recap the DAG and versioning workflow.</span></td></tr></table><div class="callout hint"><b>Common pitfalls to pre-empt.</b><ul class="clean" style="margin-bottom:0"><li>Hardcoding 'today' breaks backfills; parameterise the run date.</li><li>Committing raw data to Git bloats the repo; use DVC pointers.</li></ul></div>
+
+<p style="margin-top:22px"><a class="btn" href="../references/index.html#w04">Curated references</a> <a class="btn" href="../index.html#project">Project brief</a></p>
+<div class="pager"><a href="week03.html"><span class="lbl">Previous</span>Week 3: Containers, Orchestration &amp; Observability</a><a class="nx" href="week05.html"><span class="lbl">Next</span>Week 5: Data Quality, Contracts &amp; Feature Stores</a></div>
+</div>
+<footer>Production Engineering for AI Systems &middot; HIT &middot; Advanced Course &middot; course materials</footer>
+</body></html>

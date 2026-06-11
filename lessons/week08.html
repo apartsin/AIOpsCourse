@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 8 Lesson Plan: Monitoring, Drift &amp; Model Governance</title>
+<link rel="stylesheet" href="../assets/style.css"></head><body>
+<div class="topnav"><div class="inner">
+<a class="brand" href="../index.html">Production Engineering for AI Systems <span>&middot; HIT</span></a>
+<nav><a href="../index.html">Home</a><a href="../index.html#weekly">Weekly materials</a><a href="../index.html#project">Project</a><a href="../references/index.html">References</a></nav>
+</div></div>
+<div class="wrap">
+<div class="whead">
+<p class="eyebrow"><span class="wbadge">Week 8</span> &nbsp; Part III &middot; MLOps &middot; Presentation 2 &middot; Interim</p>
+<h1>Monitoring, Drift &amp; Model Governance</h1>
+<p class="sub">Instructor lesson plan: lecture (2 h) and practice (2 h).</p>
+</div>
+
+<div class="goals"><h2>Learning objectives</h2><ul class="clean"><li>Monitor a deployed model and its inputs.</li><li>Distinguish data drift from concept drift and detect each.</li><li>Define retraining triggers and an audit trail.</li></ul></div>
+
+<h2><span class="ic">&#127891;</span><span class="secttag">Lecture &middot; 2 hours</span></h2>
+<table class="timeline"><tr><td class="tm">0:00-0:10</td><td class="mn">10 min</td><td><b>Recap &amp; objectives</b><span class="dt">Served models; the day-two problem; objectives.</span></td></tr><tr><td class="tm">0:10-0:30</td><td class="mn">20 min</td><td><b>Motivation</b><span class="dt">Models decay silently as the world shifts. Labels often arrive late, so live accuracy is unknown and inputs become the early-warning signal.</span></td></tr><tr><td class="tm">0:30-1:05</td><td class="mn">35 min</td><td><b>Monitoring &amp; drift</b><ul class="dt-list"><li>Data drift versus concept drift: which distribution changed.</li><li>Detectors: population stability index, KS test, embedding distance.</li><li>Prediction-distribution and proxy monitoring when labels are delayed.</li></ul></td></tr><tr><td class="tm">1:05-1:15</td><td class="mn">10 min</td><td><b>Break</b></td></tr><tr><td class="tm">1:15-1:40</td><td class="mn">25 min</td><td><b>Retraining &amp; governance</b><ul class="dt-list"><li>Retraining triggers: schedule, drift threshold, or performance proxy.</li><li>Human-in-the-loop approval and audit trails for model changes.</li><li>Pairing every detector with a documented action.</li></ul></td></tr><tr><td class="tm">1:40-2:00</td><td class="mn">20 min</td><td><b>Wrap-up &amp; Presentation-2 logistics</b><span class="dt">Recap and brief the interim presentation rubric.</span></td></tr></table>
+
+<div class="callout miss"><b>Common misconception to confront.</b>
+<p style="margin:6px 0 0"><i>Students often think:</i> If accuracy looks fine, there is no drift.<br>
+<i>Set it straight:</i> Labels are often delayed, so live accuracy is usually unknown. Input drift can be detected before any accuracy drop and is the real early-warning signal.</p></div>
+
+<div class="callout check"><b>Check for understanding</b> (pose during the concept blocks; let students answer before revealing).
+<div class="selfcheck" style="margin-top:8px"><details><summary>What is the difference between data drift and concept drift?</summary><div class="ans">Data drift is a change in the input distribution; concept drift is a change in the input-to-output relationship itself.</div></details><details><summary>What do you monitor when ground-truth labels arrive weeks late?</summary><div class="ans">Input and feature distributions and the prediction distribution as proxies, alongside business KPIs.</div></details></div></div>
+
+<div class="callout"><b>Key takeaways.</b><ul class="clean" style="margin-bottom:0"><li>Models decay; monitoring is a day-two necessity, not optional.</li><li>Input drift is detectable before accuracy drops.</li><li>A detector without an attached action is just noise.</li></ul></div>
+
+<h2 id="practice"><span class="ic">&#128483;&#65039;</span><span class="secttag prac">Practice &middot; 2 hours &middot; student presentations</span></h2><p>The full two-hour practice slot is given over to <b>student project presentations (Presentation 2 &middot; Interim)</b>. There is no instructor-prepared material: teams present and defend their work to the class, with peer and instructor questions after each talk. Each team has 12 to 15 minutes plus questions, and submits a short written report and a tagged release of the repository.</p><div class="callout check"><b>What each team presents.</b><ul class="clean" style="margin-bottom:0"><li>Working data and training pipeline.</li><li>Experiment tracking and a model registry.</li><li>A first deployed endpoint, with CI/CD demonstrated live.</li><li>Monitoring and drift plan.</li></ul></div><p style="margin-top:10px">See the <a href="../index.html#project">running-project brief</a> for the full milestone description and the grading weight.</p>
+
+<p style="margin-top:22px"><a class="btn" href="../references/index.html#w08">Curated references</a> <a class="btn" href="../index.html#project">Project brief</a></p>
+<div class="pager"><a href="week07.html"><span class="lbl">Previous</span>Week 7: CI/CD for ML &amp; Model Serving</a><a class="nx" href="week09.html"><span class="lbl">Next</span>Week 9: Serving LLMs, Prompts &amp; RAG</a></div>
+</div>
+<footer>Production Engineering for AI Systems &middot; HIT &middot; Advanced Course &middot; course materials</footer>
+</body></html>

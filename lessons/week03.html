@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 3 Lesson Plan: Containers, Orchestration &amp; Observability</title>
+<link rel="stylesheet" href="../assets/style.css"></head><body>
+<div class="topnav"><div class="inner">
+<a class="brand" href="../index.html">Production Engineering for AI Systems <span>&middot; HIT</span></a>
+<nav><a href="../index.html">Home</a><a href="../index.html#weekly">Weekly materials</a><a href="../index.html#project">Project</a><a href="../references/index.html">References</a></nav>
+</div></div>
+<div class="wrap">
+<div class="whead">
+<p class="eyebrow"><span class="wbadge">Week 3</span> &nbsp; Part I &middot; DevOps Foundations</p>
+<h1>Containers, Orchestration &amp; Observability</h1>
+<p class="sub">Instructor lesson plan: lecture (2 h) and practice (2 h).</p>
+</div>
+
+<div class="goals"><h2>Learning objectives</h2><ul class="clean"><li>Containerise a service properly and run it under an orchestrator.</li><li>Explain the core Kubernetes primitives and two rollout strategies.</li><li>Instrument the three pillars of observability and read them.</li></ul></div>
+
+<h2><span class="ic">&#127891;</span><span class="secttag">Lecture &middot; 2 hours</span></h2>
+<table class="timeline"><tr><td class="tm">0:00-0:10</td><td class="mn">10 min</td><td><b>Recap &amp; objectives</b><span class="dt">From one container to a fleet; today's objectives.</span></td></tr><tr><td class="tm">0:10-0:30</td><td class="mn">20 min</td><td><b>Motivation</b><span class="dt">Running one container is easy; running hundreds with health, scaling, and rollout is why orchestration exists.</span></td></tr><tr><td class="tm">0:30-1:10</td><td class="mn">40 min</td><td><b>Kubernetes primitives &amp; rollouts</b><ul class="dt-list"><li>Pods, deployments, services, and how desired state is reconciled.</li><li>Health checks, autoscaling, and resource requests/limits.</li><li>Blue-green versus canary deployments and when each fits.</li><li>Board work: tracing a request from service to pod.</li></ul></td></tr><tr><td class="tm">1:10-1:20</td><td class="mn">10 min</td><td><b>Break</b></td></tr><tr><td class="tm">1:20-1:50</td><td class="mn">30 min</td><td><b>Observability: logs, metrics, traces</b><ul class="dt-list"><li>The three pillars and what each answers; monitoring versus observability.</li><li>The RED and USE methods for choosing what to measure.</li><li>High-cardinality, structured telemetry as the enabler of new questions.</li></ul></td></tr><tr><td class="tm">1:50-2:00</td><td class="mn">10 min</td><td><b>Wrap-up &amp; practice preview</b><span class="dt">Preview deploying to a local cluster.</span></td></tr></table>
+
+<div class="callout miss"><b>Common misconception to confront.</b>
+<p style="margin:6px 0 0"><i>Students often think:</i> Observability just means more dashboards.<br>
+<i>Set it straight:</i> Observability is the ability to ask new questions of a running system without shipping new code. Well-structured, high-cardinality telemetry, not the number of dashboards, is what enables it.</p></div>
+
+<div class="callout check"><b>Check for understanding</b> (pose during the concept blocks; let students answer before revealing).
+<div class="selfcheck" style="margin-top:8px"><details><summary>What is the difference between blue-green and canary deployment?</summary><div class="ans">Blue-green swaps all traffic between two full environments at once; canary shifts a small percentage gradually and watches metrics before ramping up.</div></details><details><summary>When do traces help where aggregate metrics do not?</summary><div class="ans">Traces follow a single request across services and show where its latency is spent, which an aggregate metric cannot localise.</div></details></div></div>
+
+<div class="callout"><b>Key takeaways.</b><ul class="clean" style="margin-bottom:0"><li>Orchestration reconciles desired state across a fleet.</li><li>Canary shifts traffic gradually and watches metrics; blue-green flips all at once.</li><li>Tail latency (p95/p99) and traces reveal what averages hide.</li></ul></div>
+
+<h2 id="practice"><span class="ic">&#128187;</span><span class="secttag prac">Practice &middot; 2 hours</span></h2><p>In the practice session the instructor demonstrates the tooling, runs the code live, and works through examples. The weekly lab is then set as homework, where students apply this themselves.</p><table class="timeline"><tr><td class="tm">0:00-0:10</td><td class="mn">10 min</td><td><b>Setup &amp; recap</b><span class="dt">Start a local cluster (kind or minikube).</span></td></tr><tr><td class="tm">0:10-1:00</td><td class="mn">50 min</td><td><b>Instructor demonstrations</b><ul class="dt-list"><li>Deploy the week-1 service: a Deployment plus a Service.</li><li>Scale it, kill a pod, and watch the orchestrator self-heal.</li><li>Perform a canary rollout and shift traffic gradually.</li></ul></td></tr><tr><td class="tm">1:00-1:10</td><td class="mn">10 min</td><td><b>Break</b></td></tr><tr><td class="tm">1:10-1:50</td><td class="mn">40 min</td><td><b>Instructor demonstrations (continued)</b><ul class="dt-list"><li>Wire Prometheus to scrape metrics and Grafana to display them.</li><li>Build a RED dashboard (rate, errors, duration) and read p95/p99 latency.</li></ul></td></tr><tr><td class="tm">1:50-2:00</td><td class="mn">10 min</td><td><b>Wrap-up &amp; lab brief</b><span class="dt">Recap the rollout and observability setup.</span></td></tr></table><div class="callout hint"><b>Common pitfalls to pre-empt.</b><ul class="clean" style="margin-bottom:0"><li>p50 latency hides the tail; always watch p95/p99.</li><li>Unstructured logs are hard to query; emit structured (JSON) logs.</li></ul></div>
+
+<p style="margin-top:22px"><a class="btn" href="../references/index.html#w03">Curated references</a> <a class="btn" href="../index.html#project">Project brief</a></p>
+<div class="pager"><a href="week02.html"><span class="lbl">Previous</span>Week 2: Continuous Integration &amp; Delivery</a><a class="nx" href="week04.html"><span class="lbl">Next</span>Week 4: Data Pipelines &amp; Versioning</a></div>
+</div>
+<footer>Production Engineering for AI Systems &middot; HIT &middot; Advanced Course &middot; course materials</footer>
+</body></html>

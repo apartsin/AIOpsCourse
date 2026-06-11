@@ -1,0 +1,13 @@
+# scratch / reference downloads
+_ref_*.html
+_ref_*.css
+
+# python
+__pycache__/
+*.pyc
+
+# os / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

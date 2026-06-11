@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 1 Lesson Plan: Production Engineering &amp; the Ops Landscape</title>
+<link rel="stylesheet" href="../assets/style.css"></head><body>
+<div class="topnav"><div class="inner">
+<a class="brand" href="../index.html">Production Engineering for AI Systems <span>&middot; HIT</span></a>
+<nav><a href="../index.html">Home</a><a href="../index.html#weekly">Weekly materials</a><a href="../index.html#project">Project</a><a href="../references/index.html">References</a></nav>
+</div></div>
+<div class="wrap">
+<div class="whead">
+<p class="eyebrow"><span class="wbadge">Week 1</span> &nbsp; Part I &middot; DevOps Foundations</p>
+<h1>Production Engineering &amp; the Ops Landscape</h1>
+<p class="sub">Instructor lesson plan: lecture (2 h) and practice (2 h).</p>
+</div>
+
+<div class="goals"><h2>Learning objectives</h2><ul class="clean"><li>Explain why production systems fail in operations more than in modelling.</li><li>Map the six operational layers (DevOps through AIOps) and how they stack.</li><li>Set up the course toolchain (Git, Docker) and the team project repository.</li></ul></div>
+
+<h2><span class="ic">&#127891;</span><span class="secttag">Lecture &middot; 2 hours</span></h2>
+<table class="timeline"><tr><td class="tm">0:00-0:10</td><td class="mn">10 min</td><td><b>Recap &amp; objectives</b><span class="dt">Course mechanics, the running project, and this week's objectives.</span></td></tr><tr><td class="tm">0:10-0:30</td><td class="mn">20 min</td><td><b>Motivation</b><span class="dt">The prototype-to-production gap: an accurate model is a small part of a working system. Outages, latency, and stale data cost more than a point of accuracy.</span></td></tr><tr><td class="tm">0:30-1:10</td><td class="mn">40 min</td><td><b>The reliability stack &amp; the SRE mindset</b><ul class="dt-list"><li>Service-level indicators, objectives, and error budgets: reliability as a measurable contract.</li><li>Toil, on-call, and the development-versus-operations tension SRE was created to resolve.</li><li>What 'production-ready' means: availability, latency, cost, recoverability, and observability.</li><li>Board work: turning a vague 'it should be reliable' into an SLO with a number.</li></ul></td></tr><tr><td class="tm">1:10-1:20</td><td class="mn">10 min</td><td><b>Break</b></td></tr><tr><td class="tm">1:20-1:50</td><td class="mn">30 min</td><td><b>The six operational layers</b><ul class="dt-list"><li>DevOps, DataOps, MLOps, LLMOps, AgentOps, AIOps: what each one owns.</li><li>How the layers compose; each later layer inherits the guarantees of the earlier ones.</li><li>Where the running project will touch every layer over the semester.</li></ul></td></tr><tr><td class="tm">1:50-2:00</td><td class="mn">10 min</td><td><b>Wrap-up &amp; practice preview</b><span class="dt">Revisit the checks below and preview the toolchain setup.</span></td></tr></table>
+
+<div class="callout miss"><b>Common misconception to confront.</b>
+<p style="margin:6px 0 0"><i>Students often think:</i> If the model is accurate, the system is done.<br>
+<i>Set it straight:</i> Accuracy is one property. Availability, latency, cost, data freshness, and recoverability are separate properties that usually dominate production outcomes.</p></div>
+
+<div class="callout check"><b>Check for understanding</b> (pose during the concept blocks; let students answer before revealing).
+<div class="selfcheck" style="margin-top:8px"><details><summary>Give one failure a 99%-accurate model can still cause in production.</summary><div class="ans">It can serve at 5 s latency, crash under load, or be fed stale/garbage inputs. Accuracy says nothing about any of these.</div></details><details><summary>What does an error budget let a team do?</summary><div class="ans">Spend a quantified amount of unreliability on shipping features, and freeze risky changes once it is exhausted. It makes reliability a negotiable, measurable resource.</div></details></div></div>
+
+<div class="callout"><b>Key takeaways.</b><ul class="clean" style="margin-bottom:0"><li>Production failures are mostly operational, not algorithmic.</li><li>SLOs and error budgets turn 'reliability' into a measurable contract.</li><li>The six layers compose; each later layer inherits the earlier ones.</li></ul></div>
+
+<h2 id="practice"><span class="ic">&#128187;</span><span class="secttag prac">Practice &middot; 2 hours</span></h2><p>In the practice session the instructor demonstrates the tooling, runs the code live, and works through examples. The weekly lab is then set as homework, where students apply this themselves.</p><table class="timeline"><tr><td class="tm">0:00-0:10</td><td class="mn">10 min</td><td><b>Setup &amp; recap</b><span class="dt">Confirm Git, Docker, and editor are installed; recap the lecture.</span></td></tr><tr><td class="tm">0:10-1:00</td><td class="mn">50 min</td><td><b>Instructor demonstrations</b><ul class="dt-list"><li>A clean Git workflow: branches, pull requests, and branch protection.</li><li>A sensible repository layout for a service; .gitignore and secrets hygiene.</li><li>Form project teams and create the shared repository.</li></ul></td></tr><tr><td class="tm">1:00-1:10</td><td class="mn">10 min</td><td><b>Break</b></td></tr><tr><td class="tm">1:10-1:50</td><td class="mn">40 min</td><td><b>Instructor demonstrations (continued)</b><ul class="dt-list"><li>Containerise a minimal 'hello-service' with a Dockerfile.</li><li>Build the image, run the container, and read its logs.</li><li>Pin versions so the image is reproducible off your laptop.</li></ul></td></tr><tr><td class="tm">1:50-2:00</td><td class="mn">10 min</td><td><b>Wrap-up &amp; project kickoff</b><span class="dt">Brief the project: teams pick a domain before week 5.</span></td></tr></table><div class="callout hint"><b>Common pitfalls to pre-empt.</b><ul class="clean" style="margin-bottom:0"><li>Never commit secrets or large data to Git; use .gitignore and environment variables from day one.</li><li>A container that runs only on your laptop usually pins no versions. Pin them.</li></ul></div>
+
+<p style="margin-top:22px"><a class="btn" href="../references/index.html#w01">Curated references</a> <a class="btn" href="../index.html#project">Project brief</a></p>
+<div class="pager"><a class="nx" href="week02.html"><span class="lbl">Next</span>Week 2: Continuous Integration &amp; Delivery</a></div>
+</div>
+<footer>Production Engineering for AI Systems &middot; HIT &middot; Advanced Course &middot; course materials</footer>
+</body></html>

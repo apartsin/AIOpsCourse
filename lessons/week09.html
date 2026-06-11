@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 9 Lesson Plan: Serving LLMs, Prompts &amp; RAG</title>
+<link rel="stylesheet" href="../assets/style.css"></head><body>
+<div class="topnav"><div class="inner">
+<a class="brand" href="../index.html">Production Engineering for AI Systems <span>&middot; HIT</span></a>
+<nav><a href="../index.html">Home</a><a href="../index.html#weekly">Weekly materials</a><a href="../index.html#project">Project</a><a href="../references/index.html">References</a></nav>
+</div></div>
+<div class="wrap">
+<div class="whead">
+<p class="eyebrow"><span class="wbadge">Week 9</span> &nbsp; Part IV &middot; LLMOps & AgentOps</p>
+<h1>Serving LLMs, Prompts &amp; RAG</h1>
+<p class="sub">Instructor lesson plan: lecture (2 h) and practice (2 h).</p>
+</div>
+
+<div class="goals"><h2>Learning objectives</h2><ul class="clean"><li>Serve an LLM and reason about its cost and latency.</li><li>Manage prompts and context as versioned program logic.</li><li>Build a retrieval-augmented generation pipeline.</li></ul></div>
+
+<h2><span class="ic">&#127891;</span><span class="secttag">Lecture &middot; 2 hours</span></h2>
+<table class="timeline"><tr><td class="tm">0:00-0:10</td><td class="mn">10 min</td><td><b>Recap &amp; objectives</b><span class="dt">From classical ML to LLMs; objectives.</span></td></tr><tr><td class="tm">0:10-0:30</td><td class="mn">20 min</td><td><b>Motivation</b><span class="dt">LLMs change the cost, latency, and quality trade-offs and introduce new failure modes: hallucination, prompt drift, and context limits.</span></td></tr><tr><td class="tm">0:30-1:05</td><td class="mn">35 min</td><td><b>LLM serving &amp; inference</b><ul class="dt-list"><li>Tokens, context windows, and why length drives cost and latency.</li><li>Batching, the KV cache, and throughput-oriented serving with vLLM.</li><li>Hosted APIs versus self-hosted models: the operational trade-offs.</li></ul></td></tr><tr><td class="tm">1:05-1:15</td><td class="mn">10 min</td><td><b>Break</b></td></tr><tr><td class="tm">1:15-1:50</td><td class="mn">35 min</td><td><b>Retrieval-augmented generation</b><ul class="dt-list"><li>Embeddings, vector databases, chunking, and retrieval.</li><li>Assembling a grounded prompt with retrieved context and citations.</li><li>Versioning prompts like code: review, rollback, and evaluation.</li></ul></td></tr><tr><td class="tm">1:50-2:00</td><td class="mn">10 min</td><td><b>Wrap-up &amp; practice preview</b><span class="dt">Preview building a RAG service.</span></td></tr></table>
+
+<div class="callout miss"><b>Common misconception to confront.</b>
+<p style="margin:6px 0 0"><i>Students often think:</i> RAG means the model can no longer hallucinate.<br>
+<i>Set it straight:</i> Retrieval grounds the answer, but the model can still ignore or misread the context. Faithfulness depends on retrieval quality, chunking, and citations, and must be measured rather than assumed.</p></div>
+
+<div class="callout check"><b>Check for understanding</b> (pose during the concept blocks; let students answer before revealing).
+<div class="selfcheck" style="margin-top:8px"><details><summary>Why version prompts like code?</summary><div class="ans">Prompts are program logic: a prompt change alters behaviour, so it must be tracked, reviewed, and rollback-able like any other code.</div></details><details><summary>Give one reason RAG retrieval fails.</summary><div class="ans">Poor chunking or an embedding mismatch means the relevant passage is never retrieved, a recall failure the generator cannot recover from.</div></details></div></div>
+
+<div class="callout"><b>Key takeaways.</b><ul class="clean" style="margin-bottom:0"><li>Context length is the main driver of LLM cost and latency.</li><li>Prompts are versioned program logic, not free text.</li><li>RAG faithfulness depends on retrieval quality and must be measured.</li></ul></div>
+
+<h2 id="practice"><span class="ic">&#128187;</span><span class="secttag prac">Practice &middot; 2 hours</span></h2><p>In the practice session the instructor demonstrates the tooling, runs the code live, and works through examples. The weekly lab is then set as homework, where students apply this themselves.</p><table class="timeline"><tr><td class="tm">0:00-0:10</td><td class="mn">10 min</td><td><b>Setup &amp; recap</b><span class="dt">Open a document corpus and an embedding model.</span></td></tr><tr><td class="tm">0:10-1:00</td><td class="mn">50 min</td><td><b>Instructor demonstrations</b><ul class="dt-list"><li>Embed and index documents in a vector database (FAISS or Qdrant).</li><li>Retrieve relevant chunks and assemble a grounded prompt.</li><li>Generate an answer with citations and inspect the retrieved context.</li></ul></td></tr><tr><td class="tm">1:00-1:10</td><td class="mn">10 min</td><td><b>Break</b></td></tr><tr><td class="tm">1:10-1:50</td><td class="mn">40 min</td><td><b>Instructor demonstrations (continued)</b><ul class="dt-list"><li>Serve generation via vLLM or a hosted API and measure latency.</li><li>Store prompts as versioned files and swap a prompt version.</li></ul></td></tr><tr><td class="tm">1:50-2:00</td><td class="mn">10 min</td><td><b>Wrap-up &amp; lab brief</b><span class="dt">Recap the RAG pipeline.</span></td></tr></table><div class="callout hint"><b>Common pitfalls to pre-empt.</b><ul class="clean" style="margin-bottom:0"><li>A huge context window is expensive and slow; retrieve few, relevant chunks.</li><li>Embedding and querying with different models silently destroys retrieval.</li></ul></div>
+
+<p style="margin-top:22px"><a class="btn" href="../references/index.html#w09">Curated references</a> <a class="btn" href="../index.html#project">Project brief</a></p>
+<div class="pager"><a href="week08.html"><span class="lbl">Previous</span>Week 8: Monitoring, Drift &amp; Model Governance</a><a class="nx" href="week10.html"><span class="lbl">Next</span>Week 10: LLM Evaluation, Guardrails &amp; Cost</a></div>
+</div>
+<footer>Production Engineering for AI Systems &middot; HIT &middot; Advanced Course &middot; course materials</footer>
+</body></html>
