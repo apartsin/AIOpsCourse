@@ -71,7 +71,7 @@ def weekly_table(doc, header, rows, rtl=False):
     return t
 
 # ---------- shared content ----------
-TITLE_EN = "AI Systems Engineering"
+TITLE_EN = "Engineering of AI Systems"
 TITLE_HE = "הנדסת מערכות בינה מלאכותית"
 
 BIB = [
