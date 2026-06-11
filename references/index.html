@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>References &middot; Production Engineering for AI Systems (HIT)</title>
+<title>References &middot; Modern AI Systems (HIT)</title>
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
 
 <div class="topnav"><div class="inner">
-  <a class="brand" href="../index.html">Production Engineering for AI Systems <span>&middot; HIT</span></a>
+  <a class="brand" href="../index.html">Modern AI Systems <span>&middot; HIT</span></a>
   <nav>
     <a href="../index.html">Home</a>
     <a href="../prereq/index.html">Prerequisites</a>
@@ -22,9 +22,9 @@
 <div class="wrap">
 
   <div class="whead">
-    <p class="eyebrow"><span class="wbadge">References</span> &nbsp; Curated reading across the six layers</p>
+    <p class="eyebrow"><span class="wbadge">References</span> &nbsp; Curated reading across the five layers</p>
     <h1>References &amp; Reading List</h1>
-    <p class="sub">Books, canonical papers, and authoritative docs for DevOps, DataOps, MLOps, LLMOps, AgentOps, and AIOps.</p>
+    <p class="sub">Books, canonical papers, and authoritative docs for DevOps, DataOps, MLOps, LLMOps, and AgentOps.</p>
   </div>
 
   <p>The list below groups recommendations by layer. The <a href="#byweek">reading-by-week</a> table at the foot maps each lecture to its primary sources; the per-week links on the lesson plans point there. Free online resources are linked directly; books are listed with ISBN.</p>
@@ -98,16 +98,6 @@
     <div class="refcard"><div class="kind">BoK &amp; lists</div><div class="body"><a href="https://github.com/punkpeye/awesome-mcp-servers" target="_blank" rel="noopener">awesome-mcp-servers</a> &middot; <a href="https://github.com/kaushikb11/awesome-llm-agents" target="_blank" rel="noopener">awesome-llm-agents</a><p class="note">AgentOps has no body of knowledge yet; OWASP's agentic-security work is in progress. The MCP server index is the best live map of the agent-tool ecosystem.</p></div></div>
   </div>
 
-  <h2 id="aiops">AIOps</h2>
-  <p style="color:var(--muted);font-size:.92rem">AIOps has the thinnest book coverage of the six layers; the freshest material lives in surveys, research, and vendor docs. Weight the papers and docs here.</p>
-  <div class="refgrid">
-    <div class="refcard"><div class="kind">Book</div><div class="body"><b>Hands-on AIOps</b> <span class="by">&middot; Navin Sabharwal &amp; Gaurav Bhardwaj &middot; Apress, 2022 &middot; ISBN 9781484282663</span><p class="note">The most complete practitioner book: event dedup, baselining, time-series anomaly detection, log NLP.</p></div></div>
-    <div class="refcard"><div class="kind">Paper</div><div class="body"><a href="https://arxiv.org/abs/2304.04661" target="_blank" rel="noopener">AIOps on Cloud Platforms: Reviews, Opportunities and Challenges</a> <span class="by">&middot; survey &middot; 2023</span><p class="note">A current survey of the AIOps landscape and open problems.</p></div></div>
-    <div class="refcard"><div class="kind">Paper</div><div class="body"><a href="https://www.microsoft.com/en-us/research/publication/aiopslab/" target="_blank" rel="noopener">AIOpsLab: Evaluating AI Agents for Autonomous Clouds</a> <span class="by">&middot; Microsoft Research, 2024</span><p class="note">A framework for evaluating autonomous operations agents.</p></div></div>
-    <div class="refcard"><div class="kind">Free</div><div class="body"><a href="https://sre.google/sre-book/effective-troubleshooting/" target="_blank" rel="noopener">SRE: Effective Troubleshooting</a> &middot; <a href="https://response.pagerduty.com/" target="_blank" rel="noopener">PagerDuty Incident Response</a><p class="note">Troubleshooting and incident-management practice that AIOps automates on top of.</p></div></div>
-    <div class="refcard"><div class="kind">BoK &amp; lists</div><div class="body"><a href="https://github.com/OpsPAI/awesome-AIOps" target="_blank" rel="noopener">awesome-AIOps (OpsPAI)</a><p class="note">AIOps has no body of knowledge; this academic paper index is the best survey entry point. ITIL 4 is the adjacent operations framework.</p></div></div>
-  </div>
-
   <h2 id="byweek">Reading by week</h2>
   <table class="weeks">
     <thead><tr><th>Wk</th><th>Topic</th><th>Primary sources</th></tr></thead>
@@ -121,9 +111,9 @@
       <tr id="w07"><td class="wk">7</td><td class="t">Tracking, registry &amp; serving</td><td><a href="#mlops">Designing ML Systems</a> (training, deployment), MLflow docs, ML Engineering (Burkov), Hidden Technical Debt.</td></tr>
       <tr id="w08"><td class="wk">8</td><td class="t">Monitoring, drift &amp; governance</td><td><a href="#mlops">Designing ML Systems</a> (monitoring), Reliable ML, Introducing MLOps (governance).</td></tr>
       <tr id="w09"><td class="wk">9</td><td class="t">LLM foundations, AI APIs &amp; the token economy</td><td><a href="#llmops">AI Engineering</a> (foundations, prompting), the OpenAI/Anthropic API docs, AWS Bedrock docs, OpenAI prompt guide.</td></tr>
-      <tr id="w10"><td class="wk">10</td><td class="t">RAG, gateways, evaluation &amp; guardrails</td><td><a href="#llmops">AI Engineering</a> (RAG, eval), RAG paper (Lewis), LiteLLM docs, Langfuse docs, NeMo Guardrails, LLM Engineer's Handbook.</td></tr>
-      <tr id="w11"><td class="wk">11</td><td class="t">Agents, MCP &amp; AgentOps</td><td><a href="#agentops">AI Engineering</a> (agents), Building Effective Agents, MCP docs, ReAct, Toolformer, AI Agents in Action, LangGraph.</td></tr>
-      <tr id="w12"><td class="wk">12</td><td class="t">AIOps &amp; AI-assisted operations</td><td><a href="#aiops">Hands-on AIOps</a>, AIOps survey, AIOpsLab, Observability Engineering, SRE troubleshooting.</td></tr>
+      <tr id="w10"><td class="wk">10</td><td class="t">RAG &amp; serving LLMs: vector databases &amp; gateways</td><td><a href="#llmops">AI Engineering</a> (RAG), RAG paper (Lewis), LiteLLM docs, LLM Engineer's Handbook, LLMs in Production (serving).</td></tr>
+      <tr id="w11"><td class="wk">11</td><td class="t">LLM evaluation, guardrails &amp; observability</td><td><a href="#llmops">AI Engineering</a> (evaluation), Langfuse docs, Ragas, NeMo Guardrails, OWASP Top 10 for LLM Apps (injection), OpenAI prompt guide.</td></tr>
+      <tr id="w12"><td class="wk">12</td><td class="t">Agents, MCP &amp; AgentOps</td><td><a href="#agentops">AI Engineering</a> (agents), Building Effective Agents, MCP docs, ReAct, Toolformer, AI Agents in Action, LangGraph.</td></tr>
       <tr id="w13"><td class="wk">13</td><td class="t">Security, governance &amp; synthesis</td><td><a href="#llmops">OWASP Top 10 for LLM Apps</a>, NIST AI RMF, Reliable ML, SRE Workbook.</td></tr>
     </tbody>
   </table>
@@ -132,7 +122,7 @@
 
 </div>
 
-<footer>Production Engineering for AI Systems &middot; HIT &middot; Advanced Course &middot; course materials</footer>
+<footer>Modern AI Systems: Development, Deployment &amp; Operations &middot; HIT &middot; Advanced Course &middot; course materials</footer>
 
 </body>
 </html>
