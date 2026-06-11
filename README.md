@@ -4,7 +4,7 @@ Course materials for **Modern AI Systems** (AI 320, HIT) — an advanced 3rd-yea
 building and running AI-enabled systems in production, spanning **DevOps, DataOps, MLOps,
 LLMOps, and AgentOps**.
 
-**Live site:** https://apartsin.github.io/AIOpsCourse/
+**Live site:** https://apartsin.github.io/AISystemsCourse/
 
 ## Format
 
