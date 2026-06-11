@@ -99,14 +99,16 @@
         <td class="wk">1</td>
         <td class="t"><b>Production Engineering &amp; the Ops Landscape</b>
           <span class="lp"><i>Lecture</i> Why systems fail in operations; SLOs and error budgets; the SRE mindset; the five layers; the course use cases (IoT, chatbot, document processing).</span>
-          <span class="lp pr"><i>Practice</i> Git workflow and repo hygiene; containerise a first service; form project teams.</span></td>
+          <span class="lp pr"><i>Practice</i> Git workflow and repo hygiene; containerise a first service; form project teams.</span>
+          <span class="lp tl"><i>Tools</i> Git &middot; GitHub &middot; Docker</span></td>
         <td class="lk"><a href="lessons/week01.html">Lesson plan</a><a href="lessons/week01.html#practice">Practice</a></td>
       </tr>
       <tr>
         <td class="wk">2</td>
         <td class="t"><b>Cloud Computing Fundamentals</b>
           <span class="lp"><i>Lecture</i> Compute, storage, and networking primitives; IaaS/PaaS/SaaS and serverless; regions and availability zones; shared responsibility; the cost model.</span>
-          <span class="lp pr"><i>Practice</i> Budget alerts first; launch a VM and the project bucket; the same app in three deployment models; price your use case.</span></td>
+          <span class="lp pr"><i>Practice</i> Budget alerts first; launch a VM and the project bucket; the same app in three deployment models; price your use case.</span>
+          <span class="lp tl"><i>Tools</i> cloud free tier &middot; VM &middot; object storage (S3) &middot; serverless &middot; cost calculator</span></td>
         <td class="lk"><a href="lessons/week02.html">Lesson plan</a><a href="lessons/week02.html#practice">Practice</a></td>
       </tr>
 
@@ -115,30 +117,34 @@
         <td class="wk">3</td>
         <td class="t"><b>CI/CD, Testing &amp; REST Services</b>
           <span class="lp"><i>Lecture</i> CI/CD pipelines; the testing pyramid; trunk-based development; infrastructure as code; REST API design and versioning.</span>
-          <span class="lp pr"><i>Practice</i> The project's FastAPI skeleton with tests; a GitHub Actions pipeline (lint, test, build, push); required checks gate the merge.</span></td>
+          <span class="lp pr"><i>Practice</i> The project's FastAPI skeleton with tests; a GitHub Actions pipeline (lint, test, build, push); required checks gate the merge.</span>
+          <span class="lp tl"><i>Tools</i> FastAPI &middot; pytest &middot; GitHub Actions &middot; container registry &middot; Terraform (intro)</span></td>
         <td class="lk"><a href="lessons/week03.html">Lesson plan</a><a href="lessons/week03.html#practice">Practice</a></td>
       </tr>
       <tr>
         <td class="wk">4</td>
         <td class="t"><b>Orchestration, Deployment Patterns &amp; Observability</b>
           <span class="lp"><i>Lecture</i> Kubernetes primitives; blue-green and canary rollouts; GitOps; logs, metrics, traces; RED and tail latency.</span>
-          <span class="lp pr"><i>Practice</i> Deploy the project to a local cluster; self-healing and scaling; a canary rollout; the project RED dashboard under load.</span></td>
+          <span class="lp pr"><i>Practice</i> Deploy the project to a local cluster; self-healing and scaling; a canary rollout; the project RED dashboard under load.</span>
+          <span class="lp tl"><i>Tools</i> Kubernetes (kind) &middot; kubectl &middot; Prometheus &middot; Grafana &middot; Argo CD (demo)</span></td>
         <td class="lk"><a href="lessons/week04.html">Lesson plan</a><a href="lessons/week04.html#practice">Practice</a></td>
       </tr>
 
       <tr class="part"><td colspan="3">Part III &middot; DataOps</td></tr>
-      <tr class="mile">
+      <tr>
         <td class="wk">5</td>
         <td class="t"><b>Data Lakes, Pipelines &amp; Versioning</b>
           <span class="lp"><i>Lecture</i> Data lake, lakehouse, and the medallion architecture (bronze, silver, gold); DAG orchestration, idempotency, backfills; data versioning and lineage.</span>
-          <span class="pres">&#127908; Student Project Presentation 1 &middot; Specification</span></td>
+          <span class="pres">&#127908; Student Project Presentation 1 &middot; Specification</span>
+          <span class="lp tl"><i>Tools</i> Airflow / Dagster &middot; DVC &middot; Parquet / Delta &middot; the object-storage lake</span></td>
         <td class="lk"><a href="lessons/week05.html">Lesson plan</a><a href="lessons/week05.html#practice">Presentation brief</a></td>
       </tr>
       <tr>
         <td class="wk">6</td>
         <td class="t"><b>Data Quality, Contracts, Streaming &amp; Feature Stores</b>
           <span class="lp"><i>Lecture</i> Validation and quality SLAs; data contracts; Kafka and streaming versus batch; feature stores and train/serve skew.</span>
-          <span class="lp pr"><i>Practice</i> Profile and gate the project's real data; write and enforce its data contract; stand up Kafka and land a stream in the lake.</span></td>
+          <span class="lp pr"><i>Practice</i> Profile and gate the project's real data; write and enforce its data contract; stand up Kafka and land a stream in the lake.</span>
+          <span class="lp tl"><i>Tools</i> Great Expectations &middot; Kafka &middot; Feast (concept)</span></td>
         <td class="lk"><a href="lessons/week06.html">Lesson plan</a><a href="lessons/week06.html#practice">Practice</a></td>
       </tr>
 
@@ -147,14 +153,16 @@
         <td class="wk">7</td>
         <td class="t"><b>Experiment Tracking, Model Registry &amp; Serving</b>
           <span class="lp"><i>Lecture</i> Experiment tracking and reproducibility; the model registry as catalogue; model cards; serving patterns and safe rollout (shadow, canary, A/B).</span>
-          <span class="lp pr"><i>Practice</i> Instrument the project's training with MLflow; register, promote, roll back; serve behind the project API; canary model v2 next to v1.</span></td>
+          <span class="lp pr"><i>Practice</i> Instrument the project's training with MLflow; register, promote, roll back; serve behind the project API; canary model v2 next to v1.</span>
+          <span class="lp tl"><i>Tools</i> MLflow (tracking + registry) &middot; BentoML / FastAPI &middot; model cards</span></td>
         <td class="lk"><a href="lessons/week07.html">Lesson plan</a><a href="lessons/week07.html#practice">Practice</a></td>
       </tr>
-      <tr class="mile">
+      <tr>
         <td class="wk">8</td>
         <td class="t"><b>Monitoring, Model Drift &amp; Governance</b>
           <span class="lp"><i>Lecture</i> Data drift versus concept drift; detectors and proxy monitoring; retraining triggers; audit trails and model governance.</span>
-          <span class="pres">&#127908; Student Project Presentation 2 &middot; Interim</span></td>
+          <span class="pres">&#127908; Student Project Presentation 2 &middot; Interim</span>
+          <span class="lp tl"><i>Tools</i> Evidently &middot; PSI / KS tests &middot; registry stage gates</span></td>
         <td class="lk"><a href="lessons/week08.html">Lesson plan</a><a href="lessons/week08.html#practice">Presentation brief</a></td>
       </tr>
 
@@ -163,37 +171,42 @@
         <td class="wk">9</td>
         <td class="t"><b>LLM Foundations: AI APIs, Tokens &amp; the Token Economy</b>
           <span class="lp"><i>Lecture</i> LLMs from an engineering standpoint; tokens and context windows; prompts and structured outputs; pricing, cost levers, rate limits; managed AI platforms (Bedrock-class).</span>
-          <span class="lp pr"><i>Practice</i> First API calls; count tokens, measure latency and cost; structured extraction from invoices; flagship versus mini tiers; a managed-platform console tour.</span></td>
+          <span class="lp pr"><i>Practice</i> First API calls; count tokens, measure latency and cost; structured extraction from invoices; flagship versus mini tiers; a managed-platform console tour.</span>
+          <span class="lp tl"><i>Tools</i> OpenAI &amp; Anthropic SDKs &middot; tokenizer &middot; JSON Schema &middot; Bedrock console</span></td>
         <td class="lk"><a href="lessons/week09.html">Lesson plan</a><a href="lessons/week09.html#practice">Practice</a></td>
       </tr>
       <tr>
         <td class="wk">10</td>
         <td class="t"><b>RAG &amp; Serving LLMs: Vector Databases &amp; Gateways</b>
           <span class="lp"><i>Lecture</i> Embeddings, vector databases, chunking, grounded prompts; prompts as versioned code; hosted versus self-hosted serving (vLLM); the gateway pattern.</span>
-          <span class="lp pr"><i>Practice</i> Build the project's RAG core on its own corpus; tune chunking; LiteLLM gateway with fallback and budgets; prompt version swaps.</span></td>
+          <span class="lp pr"><i>Practice</i> Build the project's RAG core on its own corpus; tune chunking; LiteLLM gateway with fallback and budgets; prompt version swaps.</span>
+          <span class="lp tl"><i>Tools</i> FAISS / Qdrant &middot; embedding models &middot; LiteLLM &middot; vLLM (discussed)</span></td>
         <td class="lk"><a href="lessons/week10.html">Lesson plan</a><a href="lessons/week10.html#practice">Practice</a></td>
       </tr>
       <tr>
         <td class="wk">11</td>
         <td class="t"><b>LLM Evaluation, Guardrails &amp; Observability</b>
           <span class="lp"><i>Lecture</i> Eval sets as regression suites; faithfulness and relevance; LLM-as-judge biases and calibration; LLM tracing (Langfuse); guardrails and prompt injection.</span>
-          <span class="lp pr"><i>Practice</i> Build the project's eval harness and wire it into CI; trace every call through the gateway; attack with injection, add the guardrail, measure the cache.</span></td>
+          <span class="lp pr"><i>Practice</i> Build the project's eval harness and wire it into CI; trace every call through the gateway; attack with injection, add the guardrail, measure the cache.</span>
+          <span class="lp tl"><i>Tools</i> Ragas &middot; Langfuse &middot; NeMo Guardrails &middot; response cache</span></td>
         <td class="lk"><a href="lessons/week11.html">Lesson plan</a><a href="lessons/week11.html#practice">Practice</a></td>
       </tr>
       <tr>
         <td class="wk">12</td>
         <td class="t"><b>Agents &amp; AgentOps: Tools, MCP &amp; Managed Agents</b>
           <span class="lp"><i>Lecture</i> The agent loop and function calling; memory and termination; MCP as the tool standard; step-level tracing and evaluation; bounds; managed agent services.</span>
-          <span class="lp pr"><i>Practice</i> Build a two-tool agent and trace it; localise a failure in the spans; add caps, budgets, and an error classifier; wrap a project tool as an MCP server.</span></td>
+          <span class="lp pr"><i>Practice</i> Build a two-tool agent and trace it; localise a failure in the spans; add caps, budgets, and an error classifier; wrap a project tool as an MCP server.</span>
+          <span class="lp tl"><i>Tools</i> function calling &middot; MCP SDK &middot; step tracing &middot; managed-agent consoles</span></td>
         <td class="lk"><a href="lessons/week12.html">Lesson plan</a><a href="lessons/week12.html#practice">Practice</a></td>
       </tr>
 
       <tr class="part"><td colspan="3">Part VI &middot; Security &amp; Governance</td></tr>
-      <tr class="mile">
+      <tr>
         <td class="wk">13</td>
         <td class="t"><b>Security, Governance &amp; Synthesis</b>
           <span class="lp"><i>Lecture</i> Supply-chain security and SBOMs; the OWASP Top 10 for LLM applications; privacy and audit trails; synthesis of the five layers.</span>
-          <span class="pres">&#127908; Student Project Presentation 3 &middot; Final (with oral defense)</span></td>
+          <span class="pres">&#127908; Student Project Presentation 3 &middot; Final (with oral defense)</span>
+          <span class="lp tl"><i>Tools</i> secrets manager &middot; pip-audit / SBOM &middot; OWASP LLM checklist</span></td>
         <td class="lk"><a href="lessons/week13.html">Lesson plan</a><a href="lessons/week13.html#practice">Presentation brief</a></td>
       </tr>
     </tbody>
@@ -213,20 +226,19 @@
   <table class="gtab">
     <thead><tr><th>Component</th><th>What it covers</th><th>Weight</th></tr></thead>
     <tbody>
-      <tr><td><b>Student Project Presentation 1</b></td><td>Specification and architecture (week 5).</td><td class="pct">15%</td></tr>
-      <tr><td><b>Student Project Presentation 2</b></td><td>Interim: working pipeline, registry, deployment, live CI/CD (week 8).</td><td class="pct">25%</td></tr>
-      <tr><td><b>Student Project Presentation 3</b></td><td>Final: end-to-end production demo with a short oral defense (week 13).</td><td class="pct">45%</td></tr>
-      <tr><td><b>Participation</b></td><td>In-class exercises, practice-session engagement, peer questions at presentations.</td><td class="pct">15%</td></tr>
+      <tr><td><b>Project &middot; Specification</b></td><td>Student Project Presentation 1: problem, SLOs, architecture, data and DevOps plan (week 5).</td><td class="pct">20%</td></tr>
+      <tr><td><b>Project &middot; Interim</b></td><td>Student Project Presentation 2: working pipeline, registry, deployment, live CI/CD (week 8).</td><td class="pct">30%</td></tr>
+      <tr><td><b>Project &middot; Final</b></td><td>Student Project Presentation 3: end-to-end production demo with a short oral defense (week 13).</td><td class="pct">50%</td></tr>
     </tbody>
   </table>
 
   <h2 id="project">The running project</h2>
-  <p class="projmeta">85% of the grade &middot; teams of three or four &middot; presented three times</p>
+  <p class="projmeta">100% of the grade &middot; teams of three or four &middot; presented three times</p>
   <p>Teams carry a single AI-enabled service through the entire operational stack across the semester, integrating most of the covered material into one <b>end-to-end system</b>: cloud footprint, CI/CD, medallion data lake, model registry and serving, gateway-fronted LLM feature, evals and guardrails, an agentic capability, and the audit trail through all of it. Each week's practice session ends with a project-integration brief, the increment due before the next week; the three <b>Student Project Presentations</b> are the graded checkpoints. Teams choose one of the course use cases, <b>IoT telemetry</b> (sensor streams, anomaly alerts, predictive maintenance), a <b>document-QA chatbot</b> (RAG over a real corpus), or <b>document processing</b> (structured extraction at scale), or propose another domain in the same spirit for approval. Whatever the domain, teams must demonstrate <b>operational maturity</b>, not a working model alone. Each presentation is 12 to 15 minutes plus questions, with a short written report and a tagged release of the repository.</p>
 
   <div class="pcard">
     <h3><span class="n">P1</span>Student Project Presentation 1 &middot; Specification</h3>
-    <p class="projmeta">15% of the grade &middot; week 5 &middot; spec &amp; design</p>
+    <p class="projmeta">20% of the grade &middot; week 5 &middot; spec &amp; design</p>
     <ul>
       <li>Problem statement and success metrics (SLOs) for the chosen use case.</li>
       <li>System and data architecture: medallion layout, cloud footprint, deployment-model rationale.</li>
@@ -236,7 +248,7 @@
   </div>
   <div class="pcard">
     <h3><span class="n">P2</span>Student Project Presentation 2 &middot; Interim</h3>
-    <p class="projmeta">25% of the grade &middot; week 8 &middot; working pipeline &amp; first deployment</p>
+    <p class="projmeta">30% of the grade &middot; week 8 &middot; working pipeline &amp; first deployment</p>
     <ul>
       <li>Working data pipeline through bronze and silver, with validation gates and the data contract in force.</li>
       <li>Experiment tracking and a versioned model in the registry.</li>
@@ -247,7 +259,7 @@
   </div>
   <div class="pcard">
     <h3><span class="n">P3</span>Student Project Presentation 3 &middot; Final</h3>
-    <p class="projmeta">45% of the grade with a short oral defense &middot; week 13 &middot; production demo</p>
+    <p class="projmeta">50% of the grade with a short oral defense &middot; week 13 &middot; production demo</p>
     <ul>
       <li>End-to-end production demo: data in, decision out, live.</li>
       <li>Observability shown working: the RED dashboard, the drift monitor, and an actionable alert with its runbook.</li>
@@ -255,6 +267,19 @@
       <li>Security and governance review against the OWASP LLM Top 10, plus a retrospective.</li>
       <li>Short oral defense: any team member answers on any part of the system.</li>
     </ul>
+  </div>
+
+  <h3 id="ideas">Example project ideas</h3>
+  <p>Each idea below exercises every layer of the stack; teams may take one as-is or propose a variant of comparable scope. The three primary use cases (IoT, chatbot, document processing) are the safest choices; the rest are approved variants.</p>
+  <div class="ocards">
+    <div class="ocard"><span class="oi">&#128225;</span><span class="ot"><b>Predictive-maintenance IoT monitor.</b> Stream simulated machine-sensor telemetry through Kafka into a medallion lake; serve an anomaly model behind a REST API; an agent triages alerts into ranked incidents with runbooks.</span></div>
+    <div class="ocard"><span class="oi">&#128172;</span><span class="ot"><b>Support-docs Q&amp;A chatbot.</b> RAG over a real product or university documentation corpus; grounded answers with citations; eval set for faithfulness; a guardrail against injection; an agent that escalates unanswerable questions.</span></div>
+    <div class="ocard"><span class="oi">&#129534;</span><span class="ot"><b>Invoice / form processor.</b> Structured extraction from PDFs and images at scale; a confidence threshold that routes low-confidence documents to a human; drift monitoring on field-extraction accuracy.</span></div>
+    <div class="ocard"><span class="oi">&#127863;</span><span class="ot"><b>Menu / receipt nutrition estimator.</b> Multimodal extraction from photos; a classical model plus an LLM fallback; a feature pipeline for per-item history; cost-tiered routing under a token budget.</span></div>
+    <div class="ocard"><span class="oi">&#128268;</span><span class="ot"><b>Smart-home energy advisor.</b> IoT power readings streamed and aggregated to gold features; a forecasting model served online; an agent that proposes (never executes) cost-saving actions with human-in-the-loop approval.</span></div>
+    <div class="ocard"><span class="oi">&#128221;</span><span class="ot"><b>Code-review assistant.</b> RAG over a repository plus an agent with read-only tools; step-level tracing; an eval set of known issues; strict least-privilege and prompt-injection defenses on untrusted diffs.</span></div>
+    <div class="ocard"><span class="oi">&#127891;</span><span class="ot"><b>Research-paper summariser.</b> Ingest a stream of new arXiv abstracts; embed and index; a daily digest agent; evaluation against human-written summaries; full cost and latency reporting.</span></div>
+    <div class="ocard"><span class="oi">&#128202;</span><span class="ot"><b>Churn-prediction service.</b> A tabular pipeline on the lakehouse; tracked and registered models with canary rollout; drift detection on customer features; an LLM that drafts retention-email explanations from the prediction.</span></div>
   </div>
 
   <h2 id="references">References</h2>

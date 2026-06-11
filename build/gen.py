@@ -908,6 +908,92 @@ WEEKS = [
 },
 ]
 
+
+# Per-week tools (chips) and reading lists, keyed by week number.
+TOOLS = {
+ 1:["Git","GitHub","Docker"],
+ 2:["cloud free tier","VM (IaaS)","object storage (S3)","serverless / PaaS","cost calculator","budget alerts"],
+ 3:["FastAPI","Pydantic","pytest","GitHub Actions","container registry","Terraform (intro)"],
+ 4:["Kubernetes (kind)","kubectl","Prometheus","Grafana","Argo CD (demo)"],
+ 5:["Airflow / Dagster","DVC","Parquet / Delta","object-storage lake"],
+ 6:["Great Expectations","Kafka","Feast (concept)","quarantine tables"],
+ 7:["MLflow tracking","MLflow registry","BentoML / FastAPI serving","model cards"],
+ 8:["Evidently","PSI / KS tests","embedding-distance drift","registry stage gates"],
+ 9:["OpenAI SDK","Anthropic SDK","tokenizer","JSON Schema / structured outputs","AWS Bedrock console"],
+ 10:["FAISS / Qdrant","embedding models","LiteLLM gateway","vLLM (discussed)","prompt versioning"],
+ 11:["Ragas","Langfuse","LLM-as-judge","NeMo Guardrails","response cache"],
+ 12:["function calling (SDKs)","MCP SDK","Langfuse step traces","Bedrock AgentCore / Foundry (tour)"],
+ 13:["secrets manager","pip-audit / SBOM (syft)","OWASP LLM Top 10 checklist","NIST AI RMF"],
+}
+
+# Each reading item: (title, url-or-None, note: chapters / why)
+READING = {
+ 1:[("Site Reliability Engineering, ch. 1 and ch. 4","https://sre.google/sre-book/service-level-objectives/","Introduction and Service Level Objectives; the SLO and error-budget vocabulary used all course. Free online."),
+    ("The Phoenix Project",None,"Kim, Behr and Spafford; narrative motivation for why operations dominates outcomes. Read any third of it this week."),
+    ("Accelerate, Part I",None,"Forsgren, Humble and Kim; the evidence that delivery practice predicts performance."),
+    ("SRE fundamentals: SLIs, SLAs and SLOs","https://cloud.google.com/blog/products/devops-sre/sre-fundamentals-slis-slas-and-slos","Short Google Cloud explainer; good first pass before the book chapter.")],
+ 2:[("AWS Well-Architected Framework","https://aws.amazon.com/architecture/well-architected/","The pillars overview; read Operational Excellence and Cost Optimization first."),
+    ("The Shared Responsibility Model","https://aws.amazon.com/compliance/shared-responsibility-model/","Who secures what; one page, required."),
+    ("Getting started with Amazon S3","https://aws.amazon.com/s3/getting-started/","Hands-on object-storage tutorial; mirrors the practice session."),
+    ("Designing Machine Learning Systems, ch. 10",None,"Huyen; infrastructure and tooling for ML systems, the cloud through an ML lens.")],
+ 3:[("The DevOps Handbook, the Flow chapters (Part III)",None,"Kim, Humble, Debois and Willis; the technical practices of fast flow: CI, small batches, trunk-based work."),
+    ("Accelerate, ch. 4",None,"The evidence on trunk-based development and continuous delivery."),
+    ("GitHub Actions documentation","https://docs.github.com/en/actions","The workflow syntax and quickstart; the practice session builds on it."),
+    ("FastAPI tutorial","https://fastapi.tiangolo.com/tutorial/","The official tutorial; first-class request/response contracts with Pydantic."),
+    ("Terraform: Up and Running, ch. 1 to 2",None,"Brikman; why infrastructure as code, and the Terraform model.")],
+ 4:[("Kubernetes: Up and Running, the Pods, Deployments and Services chapters",None,"Burns, Beda, Hightower and Evenson; the primitives used in practice."),
+    ("Kubernetes Basics tutorial","https://kubernetes.io/docs/tutorials/kubernetes-basics/","The official interactive walkthrough; do it before the practice session."),
+    ("Observability Engineering, ch. 1 to 2","","Majors, Fong-Jones and Miranda; what observability is and is not."),
+    ("Prometheus: getting started","https://prometheus.io/docs/prometheus/latest/getting_started/","Scrape, query, alert; the practice wiring in document form."),
+    ("Grafana fundamentals tutorial","https://grafana.com/tutorials/grafana-fundamentals/","Dashboards over Prometheus data; the RED dashboard recipe."),
+    ("Argo CD: getting started","https://argo-cd.readthedocs.io/en/stable/getting_started/","The GitOps loop in fifteen minutes; demo-level familiarity is enough.")],
+ 5:[("Fundamentals of Data Engineering, ch. 3 and ch. 6",None,"Reis and Housley; data architecture and storage, the lake and lakehouse grounding."),
+    ("The medallion architecture","https://www.databricks.com/glossary/medallion-architecture","Databricks glossary; the bronze/silver/gold pattern in two pages."),
+    ("Data Pipelines with Apache Airflow, ch. 1 to 3",None,"Harenslak and de Ruiter; DAGs, scheduling, and operators."),
+    ("Designing Data-Intensive Applications, ch. 10",None,"Kleppmann; batch processing, the conceptual base under every pipeline."),
+    ("DVC: get started","https://dvc.org/doc/start","Data versioning hands-on; the practice flow in document form.")],
+ 6:[("Great Expectations documentation","https://docs.greatexpectations.io/","Expectations, suites, and checkpoints; the validation vocabulary."),
+    ("Fundamentals of Data Engineering, ch. 7 to 8",None,"Reis and Housley; ingestion (batch and streaming) and transformation."),
+    ("Apache Kafka quickstart","https://kafka.apache.org/quickstart","Topics, producers, consumers in twenty minutes; the practice session mirrors it."),
+    ("Designing Data-Intensive Applications, ch. 11",None,"Kleppmann; stream processing, the theory under Kafka."),
+    ("Feast documentation","https://docs.feast.dev/","Feature-store concepts: offline/online features and point-in-time correctness."),
+    ("Designing Machine Learning Systems, ch. 5",None,"Huyen; feature engineering and train/serve consistency.")],
+ 7:[("Designing Machine Learning Systems, ch. 6 to 7",None,"Huyen; model development, offline evaluation, deployment and prediction services."),
+    ("MLflow documentation","https://mlflow.org/docs/latest/","Tracking and the model registry; the practice session end to end."),
+    ("Hidden Technical Debt in Machine Learning Systems","https://papers.nips.cc/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html","Sculley et al., NeurIPS 2015; why the system around the model dominates."),
+    ("Machine Learning Engineering, the deployment and serving chapters",None,"Burkov; compact treatment of packaging, serving modes, and rollout."),
+    ("BentoML documentation","https://docs.bentoml.com/","A serving runtime in practice; alternative to hand-rolled FastAPI serving.")],
+ 8:[("Designing Machine Learning Systems, ch. 8 to 9",None,"Huyen; data distribution shifts, monitoring, and continual learning."),
+    ("Evidently documentation","https://docs.evidentlyai.com/","Drift reports and monitors; the practice tooling."),
+    ("Reliable Machine Learning, the monitoring chapters",None,"Chen, Murphy, Parisa, Sculley and Underwood; SRE principles applied to ML in production."),
+    ("Introducing MLOps, the governance chapters",None,"Treveil et al.; approval workflows and audit trails for model changes.")],
+ 9:[("AI Engineering, ch. 2 and ch. 5",None,"Huyen; understanding foundation models, and prompt engineering as an engineering practice."),
+    ("OpenAI: structured outputs guide","https://platform.openai.com/docs/guides/structured-outputs","JSON-schema outputs; the week's core engineering pattern."),
+    ("Anthropic: prompt engineering overview","https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview","The vendor-neutral lessons transfer; read the structure, not just the tips."),
+    ("OpenAI tokenizer","https://platform.openai.com/tokenizer","Paste your own text; build the token intuition the cost model needs."),
+    ("AWS Bedrock","https://aws.amazon.com/bedrock/","The managed-platform archetype toured in practice: catalog, guardrails, knowledge bases, agents.")],
+ 10:[("AI Engineering, ch. 6 and ch. 9",None,"Huyen; RAG and agents, and inference optimization (the serving-choice economics)."),
+    ("Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks","https://arxiv.org/abs/2005.11401","Lewis et al., 2020; the original RAG paper."),
+    ("LiteLLM documentation","https://docs.litellm.ai/","The gateway used from this week on: routing, fallbacks, budgets, keys."),
+    ("Qdrant quickstart","https://qdrant.tech/documentation/quickstart/","A vector database hands-on; FAISS docs are the in-process alternative."),
+    ("vLLM documentation","https://docs.vllm.ai/","Self-hosted serving: batching, KV cache, throughput; read the architecture overview.")],
+ 11:[("AI Engineering, ch. 3 to 4",None,"Huyen; evaluation methodology and evaluating AI systems, the week's backbone."),
+    ("Ragas documentation","https://docs.ragas.io/","Faithfulness, answer relevance, and context metrics for RAG evals."),
+    ("Langfuse documentation","https://langfuse.com/docs","Tracing, token/cost analytics, and eval workflows; the observability stack of the practice."),
+    ("OWASP Top 10 for LLM Applications","https://genai.owasp.org/llm-top-10/","Read LLM01 (prompt injection) and LLM02 (insecure output handling) this week."),
+    ("NeMo Guardrails","https://github.com/NVIDIA/NeMo-Guardrails","Programmable guardrails; the README and examples are enough for the practice.")],
+ 12:[("AI Engineering, the agents part of ch. 6",None,"Huyen; agent patterns, tool use, and their failure modes."),
+    ("Building Effective Agents","https://www.anthropic.com/research/building-effective-agents","Anthropic; workflows versus agents, and when not to build an agent. Required."),
+    ("Model Context Protocol documentation","https://modelcontextprotocol.io/","The MCP concepts and the build-a-server tutorial used in practice."),
+    ("ReAct: Synergizing Reasoning and Acting in Language Models","https://arxiv.org/abs/2210.03629","Yao et al., ICLR 2023; the loop most agents still run."),
+    ("Toolformer","https://arxiv.org/abs/2302.04761","Schick et al., 2023; how models learn tool use."),
+    ("LangGraph documentation","https://langchain-ai.github.io/langgraph/","Optional: graph-based orchestration for multi-step agents.")],
+ 13:[("OWASP Top 10 for LLM Applications","https://genai.owasp.org/llm-top-10/","The full list this time; the lecture walks the project architectures against it."),
+    ("NIST AI Risk Management Framework","https://www.nist.gov/itl/ai-risk-management-framework","The governance umbrella: map, measure, manage, govern."),
+    ("Building Secure and Reliable Systems","https://sre.google/books/building-secure-reliable-systems/","Google; free online. Read the supply-chain and least-privilege chapters."),
+    ("SRE Workbook: postmortem culture","https://sre.google/workbook/postmortem-culture/","Blameless postmortems; the retrospective model for the final presentation.")],
+}
+
 def render_timeline(rows):
     out = ['<table class="timeline">']
     for clock, mins, head, detail in rows:
@@ -931,6 +1017,11 @@ def page(w, prev, nxt):
     take = ''.join(f'<li>{esc(x)}</li>' for x in w["take"])
     pit = ''.join(f'<li>{esc(x)}</li>' for x in w["pit"])
     proj = ''.join(f'<li>{esc(x)}</li>' for x in w["proj"])
+    tools = ''.join(f'<span class="tc">{esc(t)}</span>' for t in TOOLS[w['n']])
+    reading = ''.join(
+        ('<li>' + (f'<a href="{u}" target="_blank" rel="noopener">{esc(t)}</a>' if u else f'<b>{esc(t)}</b>')
+         + f'<span class="rdnote"> {esc(note)}</span></li>')
+        for t, u, note in READING[w['n']])
     pres_badge = (f' &nbsp; <span class="wbadge presb">&#127908; {w["pres"]}</span>'
                   if w.get("pres") else '')
 
@@ -990,6 +1081,8 @@ def page(w, prev, nxt):
 
 <div class="goals"><h2>Learning objectives</h2><ul class="clean">{obj}</ul></div>
 
+<div class="goals"><h2>Tools this week</h2><p class="toolchips">{tools}</p></div>
+
 <h2><span class="ic">&#127891;</span><span class="secttag">Lecture &middot; 2 hours</span></h2>
 {render_timeline(w['lec'])}
 
@@ -1002,6 +1095,9 @@ def page(w, prev, nxt):
 
 <div class="callout"><b>Key takeaways.</b><ul class="clean" style="margin-bottom:0">{take}</ul></div>
 {extra_pit}
+
+<h2><span class="ic">&#128218;</span>Reading &amp; resources</h2>
+<ul class="clean reading">{reading}</ul>
 
 {practice_html}
 

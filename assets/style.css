@@ -84,6 +84,18 @@ ul.clean li{ margin:0 0 7px; }
 .goals{ background:var(--band); border:1px solid var(--rule); border-radius:8px; padding:14px 18px; margin:18px 0 0; }
 .goals h2{ border:0; margin:0 0 6px; padding:0; font-size:1.02rem; }
 
+/* per-week tool chips */
+.toolchips{ margin:2px 0 0; text-align:left; }
+.toolchips .tc{ display:inline-block; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:.78rem; background:#fff; border:1px solid var(--rule); border-radius:14px;
+  padding:2px 10px; margin:2px 6px 2px 0; color:var(--navy); white-space:nowrap; }
+
+/* per-week reading list */
+.reading li{ margin:0 0 8px; }
+.reading li a{ font-weight:700; text-decoration:none; }
+.reading li a:hover{ text-decoration:underline; }
+.reading .rdnote{ color:var(--soft); }
+
 /* self-check */
 .selfcheck details{ border:1px solid var(--rule); border-radius:6px; padding:9px 14px; margin:0 0 8px; background:#fff; }
 .selfcheck summary{ cursor:pointer; font-weight:600; color:var(--ink); }
@@ -133,7 +145,6 @@ ul.clean li{ margin:0 0 7px; }
 .weeks th{ text-align:left; font-variant:small-caps; letter-spacing:.05em; color:var(--muted); font-weight:700; font-size:.8rem; border-bottom:1.5px solid var(--ink); padding:7px 10px; }
 .weeks td{ padding:9px 10px; border-top:1px solid #e6e8eb; vertical-align:top; }
 .weeks tr.part td{ background:var(--band); color:var(--navy); font-variant:small-caps; letter-spacing:.06em; font-weight:700; font-size:.85rem; }
-.weeks tr.mile td{ background:#fbf8f1; }
 .weeks td.wk{ font-family:ui-monospace,Menlo,Consolas,monospace; font-weight:700; color:var(--navy); text-align:center; width:42px; }
 .weeks td.lk a{ text-decoration:none; margin-right:12px; white-space:nowrap; }
 .weeks .t b{ display:block; }
@@ -141,9 +152,9 @@ ul.clean li{ margin:0 0 7px; }
 .weeks .t .lp{ display:block; margin-top:3px; }
 .weeks .t .lp i{ font-style:normal; font-variant:small-caps; letter-spacing:.05em; font-weight:700; font-size:.8rem; color:var(--navy); margin-right:.3em; }
 .weeks .t .lp.pr i{ color:var(--green); }
+.weeks .t .lp.tl i{ color:var(--muted); }
+.weeks .t .lp.tl{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.78rem; }
 .weeks .t .pres{ display:inline-block; margin-top:6px; background:var(--brown); color:#fff; padding:2px 10px; border-radius:4px; font-variant:small-caps; letter-spacing:.05em; font-weight:700; font-size:.78rem; }
-.weeks tr.mile td{ background:#fbf6ea; }
-.weeks tr.mile td.wk{ color:var(--brown); }
 /* Hebrew title line in the hero */
 .hero .heb{ color:var(--soft); font-size:1.05rem; margin:0 0 12px; direction:rtl; text-align:left; }
 
