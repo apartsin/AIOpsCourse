@@ -71,8 +71,8 @@ def weekly_table(doc, header, rows, rtl=False):
     return t
 
 # ---------- shared content ----------
-TITLE_EN = "Modern AI Systems: Development, Deployment and Operations"
-TITLE_HE = "מערכות בינה מלאכותית מודרניות: פיתוח, הטמעה ותפעול"
+TITLE_EN = "AI Systems Engineering"
+TITLE_HE = "הנדסת מערכות בינה מלאכותית"
 
 BIB = [
     "Beyer, Betsy, Chris Jones, Jennifer Petoff, and Niall Richard Murphy, eds. Site Reliability Engineering: How Google Runs Production Systems. O'Reilly Media, 2016.",
@@ -122,6 +122,7 @@ def build_syllabus_en():
     clear_body(d)
     L = WD_ALIGN_PARAGRAPH.LEFT
     para(d, TITLE_EN, bold=True, size=15, align=L)
+    para(d, "DevOps, DataOps, MLOps, LLMOps, AgentOps", align=L)
     para(d, "Lecture: 2 hours, practice: 2 hours", align=L)
     para(d, "4 hours, 4 credits", align=L)
     para(d, "Prerequisites: Introduction to Machine Learning, Operating Systems, Software Engineering", align=L)
@@ -156,6 +157,7 @@ def build_syllabus_he():
     clear_body(d)
     R = WD_ALIGN_PARAGRAPH.RIGHT
     para(d, TITLE_HE + " - " + TITLE_EN, rtl=True, align=R, bold=True, size=14)
+    para(d, "DevOps, DataOps, MLOps, LLMOps, AgentOps", align=WD_ALIGN_PARAGRAPH.LEFT)
     para(d, "אופן הוראה: שיעור ותרגול.", rtl=True, align=R)
     para(d, "שעות שבועיות: הרצאה 2 שעות + תרגול 2 שעות, סה\"כ שעות – 4", rtl=True, align=R)
     para(d, "נקודות זכות: 4", rtl=True, align=R)
@@ -193,7 +195,7 @@ def build_rationale():
     d = Document(os.path.join(REF, "rationale.docx"))
     clear_body(d)
     R = WD_ALIGN_PARAGRAPH.RIGHT
-    para(d, "מסמך רציונל לקורס מערכות בינה מלאכותית מודרניות", rtl=True, align=R, bold=True, size=14)
+    para(d, "מסמך רציונל לקורס הנדסת מערכות בינה מלאכותית", rtl=True, align=R, bold=True, size=14)
     para(d, TITLE_EN, align=WD_ALIGN_PARAGRAPH.LEFT, bold=True)
     para(d, "הקורס עוסק בהנדסה, בפריסה, בניטור, בממשל ובתפעול של מערכות תוכנה מבוססות בינה מלאכותית בייצור. הוא מקיף חמש שכבות תפעול: DevOps, DataOps, MLOps, LLMOps ו-AgentOps, ומקנה בסיס מעשי לבניית מערכת מקצה לקצה הכוללת ענן, צינורות נתונים, הגשת מודלים, יכולת מבוססת מודל שפה וסוכן, ונצפות וממשל לאורך כולה.", rtl=True, align=R)
     para(d, "הקורס נדרש כקורס מתקדם בשנה ג' ומיועד לסטודנטים שסיימו קורס מבוא בלמידת מכונה ובעלי רקע בסיסי בהנדסת תוכנה ובמערכות הפעלה. הוא מספק את הבסיס המשותף לפריסה ולתפעול של בינה מלאכותית בעולם האמיתי, בסיס שכל התמחות בבינה מלאכותית (ראייה ממוחשבת, מודלי שפה, סוכנים) נפגשת בו בסופו של דבר. אין צורך בניסיון קודם בענן או במודלי שפה: הקורס בונה את שני היסודות הללו מאפס לפני שהוא מתפעל אותם.", rtl=True, align=R)

@@ -12,9 +12,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "lessons")
 os.makedirs(OUT, exist_ok=True)
 
-BRAND = "Modern AI Systems"
-FOOT = ("Modern AI Systems: Development, Deployment &amp; Operations "
-        "&middot; HIT &middot; Advanced Course &middot; course materials")
+BRAND = "AI Systems Engineering"
+FOOT = ("AI Systems Engineering &middot; HIT &middot; Advanced Course &middot; course materials")
 
 def esc(s): return html.escape(s, quote=False)
 

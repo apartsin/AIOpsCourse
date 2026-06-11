@@ -1,6 +1,6 @@
-# Modern AI Systems: Development, Deployment, and Operations
+# AI Systems Engineering
 
-Course materials for **Modern AI Systems** (AI 320, HIT) — an advanced 3rd-year CS course on
+Course materials for **AI Systems Engineering** (AI 320, HIT) — an advanced 3rd-year CS course on
 building and running AI-enabled systems in production, spanning **DevOps, DataOps, MLOps,
 LLMOps, and AgentOps**.
 
