@@ -12,10 +12,10 @@
   <a class="brand" href="index.html">Production Engineering for AI Systems <span>&middot; HIT</span></a>
   <nav>
     <a href="index.html">Home</a>
+    <a href="prereq/index.html">Prerequisites</a>
     <a href="index.html#weekly">Weekly materials</a>
     <a href="index.html#project">Project</a>
-    <a href="index.html#references">References</a>
-    <a href="index.html#tools">Tools</a>
+    <a href="references/index.html">References</a>
   </nav>
 </div></div>
 
@@ -28,18 +28,19 @@
     <p class="sub">DevOps, DataOps, MLOps, LLMOps, AgentOps &amp; AIOps</p>
     <div class="meta">
       <span><b>Prerequisites:</b> Introduction to Machine Learning, Operating Systems, Software Engineering</span>
-      <span><b>Feeds into:</b> capstone &amp; industry internships</span>
+      <span><b>Required for:</b> AI and software-engineering specializations</span>
+      <span><b>Feeds into:</b> the capstone project and industry internships</span>
       <span><b>Format:</b> 2 h lecture + 2 h practice + a running project</span>
       <span><b>Assessment:</b> labs and a running project, no written exams</span>
     </div>
   </div>
 
   <h2>About this course</h2>
-  <p>Modern AI systems fail far more often in <b>operations</b> than in modelling. A model that scores well offline still has to be packaged, served, version-controlled, fed with trustworthy data, monitored for drift, secured, costed, and governed once real users depend on it. This course teaches the engineering discipline that surrounds the model: the practices, tooling, and architectures that take a prototype into reliable, observable, continuously-improving production service. The emphasis is on building and operating, not on watching.</p>
-  <p><b>Rationale.</b> Every AI specialization, vision, language, agents, eventually meets the same operational stack. This course provides that shared base for deploying and running AI in the real world. It is project- and lab-based and designed for the way students will actually work, with an AI coding assistant at hand, while keeping the learning genuine through a Build, Operate, and Review model. Each week pairs a 2-hour lecture with a 2-hour instructor-led practice session, and the whole semester is spent carrying one real service from specification into production.</p>
+  <p>This is the advanced course on running AI in production, taken after a first machine-learning course. Modern AI systems fail far more often in <b>operations</b> than in modelling: a model that scores well offline still has to be packaged, served, version-controlled, fed with trustworthy data, monitored for drift, secured, costed, and governed once real users depend on it. It teaches the engineering discipline that surrounds the model, the practices, tooling, and architectures that take a prototype into reliable, observable, continuously-improving production service. The emphasis is on building and operating, not on watching. Each week has a 2-hour lecture (concepts and architecture) and a 2-hour instructor-led practice session in which the instructor demonstrates the tooling and works through a live deployment.</p>
+  <p><b>Rationale.</b> Every AI specialization, vision, language, agents, eventually meets the same operational stack. This course provides that shared base for deploying and running AI in the real world. It is valuable in its own right, not only as a step toward later work. It is project- and lab-based and designed for the way students will actually work, with an AI coding assistant at hand, while keeping the learning genuine through a Build, Operate, and Review model.</p>
 
   <h2>Course format</h2>
-  <p>Each week has two parts: a <b>2-hour lecture</b> (concepts and architecture) and a <b>2-hour practice session</b> in which the instructor demonstrates the tooling and works through a live deployment. The thirteen weeks form a layered stack of operational practices, from the DevOps foundation every other layer inherits, up to using AI to run the operations themselves. A single running project, presented to the class three times, threads through all of it.</p>
+  <p>Each week has two parts: a <b>2-hour lecture</b> (concepts and architecture) and a <b>2-hour practice session</b> in which the instructor demonstrates the tooling and works through a live deployment. The thirteen weeks form five parts: DevOps Foundations (weeks 1 to 3), DataOps (4 to 5), MLOps (6 to 8), LLMOps and AgentOps (9 to 11), and AIOps, Security and Governance (12 to 13). A single running project threads through all of it and is presented to the class three times: a specification (week 5), an interim review (week 8), and a final production demo (week 13).</p>
   <div class="layers">
     <div class="layer l1"><span class="nm">DevOps</span><span class="ds">The foundation: version control, CI/CD, containers, orchestration, IaC, observability.</span></div>
     <div class="layer l2"><span class="nm">DataOps</span><span class="ds">Trustworthy data: pipeline orchestration, versioning, quality, lineage, feature stores.</span></div>
@@ -60,8 +61,32 @@
     <div class="ocard"><span class="n">6</span><span class="oi">&#128737;&#65039;</span><span class="ot">Evaluate generation quality and apply guardrails against unsafe or injected behaviour.</span></div>
     <div class="ocard"><span class="n">7</span><span class="oi">&#129302;</span><span class="ot">Trace, evaluate, and govern tool-using autonomous agents.</span></div>
     <div class="ocard"><span class="n">8</span><span class="oi">&#129658;</span><span class="ot">Apply AIOps: anomaly detection and automation to monitor, triage, and self-heal systems.</span></div>
-    <div class="ocard"><span class="n">9</span><span class="oi">&#128279;</span><span class="ot">Apply security, privacy, and responsible-AI practice across the full stack.</span></div>
+    <div class="ocard"><span class="n">9</span><span class="oi">&#128737;&#65039;</span><span class="ot">Secure the supply chain and apply privacy and responsible-AI practice across the stack.</span></div>
+    <div class="ocard"><span class="n">10</span><span class="oi">&#128279;</span><span class="ot">Carry one running service from specification through to a governed production deployment.</span></div>
   </div>
+
+  <h2 id="prereq">Prerequisites: review and self-check</h2>
+  <p>The course assumes a prior machine-learning course and the background below. Each row links a short refresher and a set of self-check questions, so readiness can be confirmed before Week 1.</p>
+  <table class="prereqs">
+    <thead><tr><th>Subject</th><th>Background topics</th><th>Material</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="subj"><span class="pi">&#128295;</span>Programming &amp; version control</td>
+        <td class="top">Python, Git and pull requests, unit testing, code review, reading a stack trace</td>
+        <td class="lk"><a href="prereq/index.html#programming">Review</a><a href="prereq/index.html#self-check">Self-check</a></td>
+      </tr>
+      <tr>
+        <td class="subj"><span class="pi">&#9881;&#65039;</span>Operating systems &amp; networking</td>
+        <td class="top">Processes, the Linux shell, filesystems, HTTP and REST, TCP/IP, an intuition for containers</td>
+        <td class="lk"><a href="prereq/index.html#systems">Review</a><a href="prereq/index.html#self-check">Self-check</a></td>
+      </tr>
+      <tr>
+        <td class="subj"><span class="pi">&#129518;</span>Machine learning</td>
+        <td class="top">Training and evaluation, train/test split, loss versus metric, overfitting, a trained model as an artifact</td>
+        <td class="lk"><a href="prereq/index.html#ml">Review</a><a href="prereq/index.html#self-check">Self-check</a></td>
+      </tr>
+    </tbody>
+  </table>
 
   <h2 id="weekly">Weekly materials</h2>
   <table class="weeks">
@@ -71,75 +96,75 @@
       <tr>
         <td class="wk">1</td>
         <td class="t"><b>Production Engineering &amp; the Ops Landscape</b><span>Why systems fail in operations; the reliability stack; the SRE mindset; the six layers; the running project.</span></td>
-        <td class="lk"><a href="lessons/week01.html">Lecture</a><a href="lessons/week01.html#practice">Practice</a></td>
+        <td class="lk"><a href="lessons/week01.html">Lesson plan</a><a href="lessons/week01.html#practice">Practice</a></td>
       </tr>
       <tr>
         <td class="wk">2</td>
         <td class="t"><b>Continuous Integration &amp; Delivery</b><span>Version-control strategy, build automation, the testing pyramid, CI/CD pipelines, infrastructure as code.</span></td>
-        <td class="lk"><a href="lessons/week02.html">Lecture</a><a href="lessons/week02.html#practice">Practice</a></td>
+        <td class="lk"><a href="lessons/week02.html">Lesson plan</a><a href="lessons/week02.html#practice">Practice</a></td>
       </tr>
       <tr>
         <td class="wk">3</td>
         <td class="t"><b>Containers, Orchestration &amp; Observability</b><span>Docker and Kubernetes; deployment patterns (blue-green, canary); the three pillars (logs, metrics, traces).</span></td>
-        <td class="lk"><a href="lessons/week03.html">Lecture</a><a href="lessons/week03.html#practice">Practice</a></td>
+        <td class="lk"><a href="lessons/week03.html">Lesson plan</a><a href="lessons/week03.html#practice">Practice</a></td>
       </tr>
 
       <tr class="part"><td colspan="3">Part II &middot; DataOps</td></tr>
       <tr>
         <td class="wk">4</td>
         <td class="t"><b>Data Pipelines &amp; Versioning</b><span>Pipeline orchestration (Airflow, Dagster); batch versus streaming; idempotency; data versioning and lineage.</span></td>
-        <td class="lk"><a href="lessons/week04.html">Lecture</a><a href="lessons/week04.html#practice">Practice</a></td>
+        <td class="lk"><a href="lessons/week04.html">Lesson plan</a><a href="lessons/week04.html#practice">Practice</a></td>
       </tr>
       <tr class="mile">
         <td class="wk">5</td>
         <td class="t"><b>Data Quality, Contracts &amp; Feature Stores</b><span>Validation, data contracts, quality SLAs, governance, and feature stores.</span><span class="pres">&#9654; Presentation 1 &middot; Specification</span></td>
-        <td class="lk"><a href="lessons/week05.html">Lecture</a><a href="lessons/week05.html#practice">Practice</a><a href="index.html#project">Project brief</a></td>
+        <td class="lk"><a href="lessons/week05.html">Lesson plan</a><a href="lessons/week05.html#practice">Practice</a><a href="index.html#project">Project brief</a></td>
       </tr>
 
       <tr class="part"><td colspan="3">Part III &middot; MLOps</td></tr>
       <tr>
         <td class="wk">6</td>
         <td class="t"><b>Experiment Tracking &amp; the Model Registry</b><span>Reproducibility; experiment tracking (MLflow, W&amp;B); the model registry; metadata, lineage, and model cards.</span></td>
-        <td class="lk"><a href="lessons/week06.html">Lecture</a><a href="lessons/week06.html#practice">Practice</a></td>
+        <td class="lk"><a href="lessons/week06.html">Lesson plan</a><a href="lessons/week06.html#practice">Practice</a></td>
       </tr>
       <tr>
         <td class="wk">7</td>
         <td class="t"><b>CI/CD for ML &amp; Model Serving</b><span>Continuous training; model packaging; online, batch, and streaming serving; shadow and canary deploys; A/B testing.</span></td>
-        <td class="lk"><a href="lessons/week07.html">Lecture</a><a href="lessons/week07.html#practice">Practice</a></td>
+        <td class="lk"><a href="lessons/week07.html">Lesson plan</a><a href="lessons/week07.html#practice">Practice</a></td>
       </tr>
       <tr class="mile">
         <td class="wk">8</td>
         <td class="t"><b>Monitoring, Drift &amp; Model Governance</b><span>Production monitoring; data and concept drift; performance decay; retraining triggers; model governance.</span><span class="pres">&#9654; Presentation 2 &middot; Interim</span></td>
-        <td class="lk"><a href="lessons/week08.html">Lecture</a><a href="lessons/week08.html#practice">Practice</a><a href="index.html#project">Project brief</a></td>
+        <td class="lk"><a href="lessons/week08.html">Lesson plan</a><a href="lessons/week08.html#practice">Practice</a><a href="index.html#project">Project brief</a></td>
       </tr>
 
       <tr class="part"><td colspan="3">Part IV &middot; LLMOps &amp; AgentOps</td></tr>
       <tr>
         <td class="wk">9</td>
         <td class="t"><b>Serving LLMs, Prompts &amp; RAG</b><span>Inference optimisation; prompt and context management; vector databases; retrieval-augmented generation.</span></td>
-        <td class="lk"><a href="lessons/week09.html">Lecture</a><a href="lessons/week09.html#practice">Practice</a></td>
+        <td class="lk"><a href="lessons/week09.html">Lesson plan</a><a href="lessons/week09.html#practice">Practice</a></td>
       </tr>
       <tr>
         <td class="wk">10</td>
         <td class="t"><b>LLM Evaluation, Guardrails &amp; Cost</b><span>Offline eval and LLM-as-judge; safety guardrails; prompt injection; caching; token cost and latency; fine-tuning ops.</span></td>
-        <td class="lk"><a href="lessons/week10.html">Lecture</a><a href="lessons/week10.html#practice">Practice</a></td>
+        <td class="lk"><a href="lessons/week10.html">Lesson plan</a><a href="lessons/week10.html#practice">Practice</a></td>
       </tr>
       <tr>
         <td class="wk">11</td>
         <td class="t"><b>AgentOps: Operating Autonomous Agents</b><span>Agent architectures; tool use and function calling; multi-agent orchestration; tracing; evaluation; memory; cost and safety.</span></td>
-        <td class="lk"><a href="lessons/week11.html">Lecture</a><a href="lessons/week11.html#practice">Practice</a></td>
+        <td class="lk"><a href="lessons/week11.html">Lesson plan</a><a href="lessons/week11.html#practice">Practice</a></td>
       </tr>
 
       <tr class="part"><td colspan="3">Part V &middot; AIOps, Security &amp; Governance</td></tr>
       <tr>
         <td class="wk">12</td>
         <td class="t"><b>AIOps: AI for IT Operations</b><span>Telemetry at scale; anomaly detection; intelligent alerting and noise reduction; root-cause analysis; automated remediation and self-healing.</span></td>
-        <td class="lk"><a href="lessons/week12.html">Lecture</a><a href="lessons/week12.html#practice">Practice</a></td>
+        <td class="lk"><a href="lessons/week12.html">Lesson plan</a><a href="lessons/week12.html#practice">Practice</a></td>
       </tr>
       <tr class="mile">
         <td class="wk">13</td>
         <td class="t"><b>Security, Governance &amp; Synthesis</b><span>Supply-chain security; privacy and compliance; responsible AI; the unified Ops stack; future directions.</span><span class="pres">&#9654; Presentation 3 &middot; Final (with oral defense)</span></td>
-        <td class="lk"><a href="lessons/week13.html">Lecture</a><a href="lessons/week13.html#practice">Practice</a><a href="index.html#project">Project brief</a></td>
+        <td class="lk"><a href="lessons/week13.html">Lesson plan</a><a href="lessons/week13.html#practice">Practice</a><a href="index.html#project">Project brief</a></td>
       </tr>
     </tbody>
   </table>
@@ -153,8 +178,22 @@
     <div class="step c"><h3><span class="tag">Part C &middot; in plain language</span>Review &amp; defend</h3><p>Explain the design and its trade-offs, where it would fail, and what you would change; be ready to defend any line.</p></div>
   </div>
 
+  <h2>Assessment and grading</h2>
+  <p>Grading is project- and lab-based, with weight on the parts an AI assistant cannot do for the student: operating systems under load, interpreting telemetry, and defending design decisions. There are no written exams.</p>
+  <table class="gtab">
+    <thead><tr><th>Component</th><th>What it covers</th><th>Weight</th></tr></thead>
+    <tbody>
+      <tr><td><b>Weekly labs</b></td><td>Twelve labs (best 10 count), graded mostly on the Operate and Review parts.</td><td class="pct">30%</td></tr>
+      <tr><td><b>Project &middot; Specification</b></td><td>The specification presentation (week 5).</td><td class="pct">10%</td></tr>
+      <tr><td><b>Project &middot; Interim</b></td><td>The interim presentation: working pipeline and first deployment (week 8).</td><td class="pct">15%</td></tr>
+      <tr><td><b>Project &middot; Final</b></td><td>The production demo and short oral defense (week 13).</td><td class="pct">35%</td></tr>
+      <tr><td><b>Participation</b></td><td>In-class exercises and practice-session engagement.</td><td class="pct">10%</td></tr>
+    </tbody>
+  </table>
+
   <h2 id="project">The running project</h2>
-  <p>Teams of three or four carry a single AI-enabled service through the entire operational stack across the semester. The same system is presented to the class <b>three times</b>; each presentation is a graded milestone covering the layers reached so far. Teams choose a domain, a document-QA assistant, a churn-prediction service, a recommendation API, a monitoring copilot, and must demonstrate <b>operational maturity</b>, not a working model alone. Each presentation is 12 to 15 minutes plus questions, with a short written report and a tagged release of the repository.</p>
+  <p class="projmeta">55% of the grade &middot; teams of three or four &middot; presented three times</p>
+  <p>Teams carry a single AI-enabled service through the entire operational stack across the semester. The same system is presented to the class three times; each presentation is a graded milestone covering the layers reached so far. Teams choose a domain, a document-QA assistant, a churn-prediction service, a recommendation API, a monitoring copilot, and must demonstrate <b>operational maturity</b>, not a working model alone. Each presentation is 12 to 15 minutes plus questions, with a short written report and a tagged release of the repository.</p>
 
   <div class="pcard">
     <h3><span class="n">P1</span>Presentation 1 &middot; Specification</h3>
@@ -187,26 +226,12 @@
     </ul>
   </div>
 
-  <h2>Assessment and grading</h2>
-  <p>Grading is project- and lab-based, with weight on the parts an AI assistant cannot do for the student: operating systems under load, interpreting telemetry, and defending design decisions. There are no written exams.</p>
-  <table class="gtab">
-    <thead><tr><th>Component</th><th>What it covers</th><th>Weight</th></tr></thead>
-    <tbody>
-      <tr><td><b>Project &middot; Presentation 1</b></td><td>Specification and architecture (week 5).</td><td class="pct">10%</td></tr>
-      <tr><td><b>Project &middot; Presentation 2</b></td><td>Working pipeline and first deployment (week 8).</td><td class="pct">15%</td></tr>
-      <tr><td><b>Project &middot; Presentation 3</b></td><td>Production demo with a short oral defense (week 13).</td><td class="pct">35%</td></tr>
-      <tr><td><b>Weekly labs</b></td><td>Twelve labs (best 10 count), graded mostly on the Operate and Review parts.</td><td class="pct">30%</td></tr>
-      <tr><td><b>Participation</b></td><td>In-class exercises and practice-session engagement.</td><td class="pct">10%</td></tr>
-      <tr class="sum"><td>Total</td><td></td><td class="pct">100%</td></tr>
-    </tbody>
-  </table>
-
   <h2 id="references">References</h2>
-  <p>A curated reading list spanning the six layers. Individual lesson plans link the chapters and resources for that week. Full list on the <a href="references/index.html">references page</a>.</p>
+  <p>A curated reading list spanning the six layers. Individual lesson plans link the chapters and resources for that week; the full list is on the <a href="references/index.html">references page</a>.</p>
   <div class="refgrid">
-    <div class="refcard"><div class="kind">Foundations</div><div class="body"><a href="references/index.html">Site Reliability Engineering</a> <span class="by">&middot; Beyer, Jones, Petoff &amp; Murphy (Google, O'Reilly 2016)</span><p class="note">The canonical text on running production systems: SLOs, error budgets, toil, on-call, and incident response.</p></div></div>
-    <div class="refcard"><div class="kind">Data</div><div class="body"><a href="references/index.html">Designing Data-Intensive Applications</a> <span class="by">&middot; Martin Kleppmann (O'Reilly 2017)</span><p class="note">The foundation for DataOps: storage, replication, batch and stream processing, and reliability of data systems.</p></div></div>
-    <div class="refcard"><div class="kind">ML / LLM</div><div class="body"><a href="references/index.html">Designing ML Systems &amp; AI Engineering</a> <span class="by">&middot; Chip Huyen (O'Reilly 2022 / 2025)</span><p class="note">End-to-end MLOps and LLMOps: data, training, deployment, monitoring, RAG, evaluation, and inference at scale.</p></div></div>
+    <div class="refcard"><div class="kind">Foundations</div><div class="body"><a href="references/index.html#foundations">Site Reliability Engineering</a> <span class="by">&middot; Beyer, Jones, Petoff &amp; Murphy (Google, O'Reilly 2016)</span><p class="note">The canonical text on running production systems: SLOs, error budgets, toil, on-call, and incident response.</p></div></div>
+    <div class="refcard"><div class="kind">Data</div><div class="body"><a href="references/index.html#foundations">Designing Data-Intensive Applications</a> <span class="by">&middot; Martin Kleppmann (O'Reilly 2017)</span><p class="note">The foundation for DataOps: storage, replication, batch and stream processing, and reliability of data systems.</p></div></div>
+    <div class="refcard"><div class="kind">ML / LLM</div><div class="body"><a href="references/index.html#mlops">Designing ML Systems &amp; AI Engineering</a> <span class="by">&middot; Chip Huyen (O'Reilly 2022 / 2025)</span><p class="note">End-to-end MLOps and LLMOps: data, training, deployment, monitoring, RAG, evaluation, and inference at scale.</p></div></div>
   </div>
 
   <h2 id="tools">Tools and resources</h2>

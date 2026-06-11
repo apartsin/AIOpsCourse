@@ -622,7 +622,7 @@ def page(w, prev, nxt):
 <link rel="stylesheet" href="../assets/style.css"></head><body>
 <div class="topnav"><div class="inner">
 <a class="brand" href="../index.html">{BRAND} <span>&middot; HIT</span></a>
-<nav><a href="../index.html">Home</a><a href="../index.html#weekly">Weekly materials</a><a href="../index.html#project">Project</a><a href="../references/index.html">References</a></nav>
+<nav><a href="../index.html">Home</a><a href="../prereq/index.html">Prerequisites</a><a href="../index.html#weekly">Weekly materials</a><a href="../index.html#project">Project</a><a href="../references/index.html">References</a></nav>
 </div></div>
 <div class="wrap">
 <div class="whead">

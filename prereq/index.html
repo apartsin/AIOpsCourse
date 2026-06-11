@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prerequisites &middot; Production Engineering for AI Systems (HIT)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="topnav"><div class="inner">
+  <a class="brand" href="../index.html">Production Engineering for AI Systems <span>&middot; HIT</span></a>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="index.html">Prerequisites</a>
+    <a href="../index.html#weekly">Weekly materials</a>
+    <a href="../index.html#project">Project</a>
+    <a href="../references/index.html">References</a>
+  </nav>
+</div></div>
+
+<div class="wrap">
+
+  <div class="whead">
+    <p class="eyebrow"><span class="wbadge">Prerequisites</span> &nbsp; Review &amp; self-check before Week 1</p>
+    <h1>Prerequisites: Review &amp; Self-check</h1>
+    <p class="sub">Confirm the background below before the course begins.</p>
+  </div>
+
+  <p>The course assumes a prior machine-learning course and the three areas below. Each section lists the background topics, a short refresher to review, and a set of <a href="#self-check">self-check questions</a> at the foot of the page. If a self-check question is hard, follow the refresher before Week 1; the course moves quickly past these on day one.</p>
+
+  <h2 id="programming"><span class="ic">&#128295;</span>Programming &amp; version control</h2>
+  <p>Production engineering is mostly code and collaboration. You should be comfortable writing and reading Python, working in Git with branches and pull requests, and reasoning about a failing test or a stack trace.</p>
+  <ul class="clean">
+    <li>Python: functions, modules, virtual environments, <code>pip</code>, reading JSON, calling a REST API.</li>
+    <li>Git: clone, branch, commit, push, pull request, merge conflict, reading a diff.</li>
+    <li>Testing: what a unit test is, running a test suite, interpreting a failure.</li>
+    <li>Collaboration: code review, a sensible commit message, a <code>.gitignore</code>.</li>
+  </ul>
+  <p><b>Refresher.</b> <a href="https://docs.github.com/en/get-started/start-your-journey/git-and-github-learning-resources" target="_blank" rel="noopener">Git &amp; GitHub learning resources</a> &middot; <a href="https://docs.python.org/3/tutorial/" target="_blank" rel="noopener">The Python tutorial</a>.</p>
+
+  <h2 id="systems"><span class="ic">&#9881;&#65039;</span>Operating systems &amp; networking</h2>
+  <p>Everything you operate runs on an operating system and talks over a network. You need a working mental model of processes, the shell, and how an HTTP request travels.</p>
+  <ul class="clean">
+    <li>The shell: navigating the filesystem, environment variables, pipes, exit codes.</li>
+    <li>Processes: what a process is, ports, foreground versus background, signals.</li>
+    <li>Networking: HTTP methods and status codes, REST, what TCP/IP and DNS do.</li>
+    <li>An intuition for containers: why an image bundles dependencies and pins versions.</li>
+  </ul>
+  <p><b>Refresher.</b> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview" target="_blank" rel="noopener">MDN: an overview of HTTP</a> &middot; <a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener">Docker: get started</a>.</p>
+
+  <h2 id="ml"><span class="ic">&#129518;</span>Machine learning</h2>
+  <p>This is not an ML course; it is about operating ML. You should already understand how a model is trained and evaluated, and treat a trained model as an artifact to be versioned, served, and monitored.</p>
+  <ul class="clean">
+    <li>The basics: training versus inference, the train/validation/test split.</li>
+    <li>Loss versus metric, and why they differ.</li>
+    <li>Overfitting and generalization; why a held-out set matters.</li>
+    <li>A trained model as a saved artifact with a version and dependencies.</li>
+  </ul>
+  <p><b>Refresher.</b> <a href="https://developers.google.com/machine-learning/crash-course" target="_blank" rel="noopener">Google Machine Learning Crash Course</a>.</p>
+
+  <h2 id="self-check"><span class="ic">&#9989;</span>Self-check</h2>
+  <p>Try to answer each before revealing it. If several are hard, work the refreshers above before Week 1.</p>
+  <div class="selfcheck">
+    <details><summary>You change one file and want it reviewed without touching <code>main</code>. What Git steps do you take?</summary><div class="ans">Create a branch, commit the change, push the branch, and open a pull request against <code>main</code> for review; merge only after approval and a green check.</div></details>
+    <details><summary>A service "works on my machine" but fails on a teammate's. What is the most likely cause and the fix?</summary><div class="ans">Unpinned dependencies or environment differences. Pin versions and ship the same environment, for example a container image that bundles the dependencies, so every machine runs the same thing.</div></details>
+    <details><summary>What is the difference between a port and a process, and how do they relate?</summary><div class="ans">A process is a running program; a port is a numbered network endpoint the process can listen on. One process can listen on a port to receive requests; two processes cannot bind the same port at once.</div></details>
+    <details><summary>A client gets HTTP 500 from your API. Is the problem on the client or the server, and what does 500 mean?</summary><div class="ans">On the server: 5xx are server-side errors (500 is a generic internal error). 4xx would indicate a client-side problem such as a bad request or missing auth.</div></details>
+    <details><summary>Why split data into train and test sets, and what goes wrong if you evaluate on the training set?</summary><div class="ans">To estimate how the model performs on unseen data. Evaluating on the training set measures memorization, not generalization, and hides overfitting, so the number is optimistic and misleading.</div></details>
+    <details><summary>What is the difference between a loss and a metric?</summary><div class="ans">The loss is the differentiable objective the model optimizes during training; a metric is a (often non-differentiable) quantity you care about for evaluation, such as accuracy or F1. They can move in different directions.</div></details>
+  </div>
+
+  <div class="pager"><a href="../index.html"><span class="lbl">Back</span>Course home</a></div>
+
+</div>
+
+<footer>Production Engineering for AI Systems &middot; HIT &middot; Advanced Course &middot; course materials</footer>
+
+</body>
+</html>

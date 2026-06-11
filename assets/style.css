@@ -153,6 +153,16 @@ ul.clean li{ margin:0 0 7px; }
 .gtab td.pct{ font-family:ui-monospace,Menlo,Consolas,monospace; font-weight:700; text-align:right; color:var(--navy); white-space:nowrap; }
 .gtab tr.sum td{ border-top:1.5px solid var(--ink); font-weight:700; }
 
+/* prerequisites readiness table */
+.prereqs{ border-collapse:collapse; width:100%; font-size:.95rem; margin-top:8px; }
+.prereqs th{ text-align:left; font-variant:small-caps; letter-spacing:.05em; color:var(--muted); font-weight:700; font-size:.8rem; border-bottom:1.5px solid var(--ink); padding:7px 10px; }
+.prereqs td{ padding:9px 10px; border-top:1px solid #e6e8eb; vertical-align:top; }
+.prereqs td.subj{ white-space:nowrap; font-weight:700; }
+.prereqs td.subj .pi{ margin-right:.4em; }
+.prereqs td.top{ color:var(--soft); font-size:.9rem; }
+.prereqs td.lk a{ white-space:nowrap; text-decoration:none; font-weight:700; }
+.prereqs td.lk a+a{ margin-left:14px; }
+
 /* references */
 .refgrid{ display:grid; gap:12px; margin-top:8px; }
 .refcard{ border:1px solid var(--rule); border-radius:8px; padding:0; overflow:hidden; display:flex; }
