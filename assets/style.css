@@ -136,6 +136,9 @@ ul.clean li{ margin:0 0 7px; }
 .weeks td.lk a{ text-decoration:none; margin-right:12px; white-space:nowrap; }
 .weeks .t b{ display:block; }
 .weeks .t span{ color:var(--muted); font-size:.86rem; }
+.weeks .t .lp{ display:block; margin-top:3px; }
+.weeks .t .lp i{ font-style:normal; font-variant:small-caps; letter-spacing:.05em; font-weight:700; font-size:.8rem; color:var(--navy); margin-right:.3em; }
+.weeks .t .lp.pr i{ color:var(--green); }
 .weeks .t .pres{ display:block; margin-top:5px; color:var(--brown); font-variant:small-caps; letter-spacing:.05em; font-weight:700; font-size:.82rem; }
 
 /* project example cards */
